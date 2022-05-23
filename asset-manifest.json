@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.f9e6b034.chunk.css",
-    "main.js": "/static/js/main.d79114e6.chunk.js",
-    "main.js.map": "/static/js/main.d79114e6.chunk.js.map",
+    "main.js": "/static/js/main.bb2a3d53.chunk.js",
+    "main.js.map": "/static/js/main.bb2a3d53.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.26096b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.26096b02.js.map",
-    "static/js/2.eb8a3bbf.chunk.js": "/static/js/2.eb8a3bbf.chunk.js",
-    "static/js/2.eb8a3bbf.chunk.js.map": "/static/js/2.eb8a3bbf.chunk.js.map",
+    "static/js/2.f7274205.chunk.js": "/static/js/2.f7274205.chunk.js",
+    "static/js/2.f7274205.chunk.js.map": "/static/js/2.f7274205.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.f9e6b034.chunk.css.map": "/static/css/main.f9e6b034.chunk.css.map",
-    "static/js/2.eb8a3bbf.chunk.js.LICENSE.txt": "/static/js/2.eb8a3bbf.chunk.js.LICENSE.txt",
+    "static/js/2.f7274205.chunk.js.LICENSE.txt": "/static/js/2.f7274205.chunk.js.LICENSE.txt",
     "static/media/Django.4c399895.jpg": "/static/media/Django.4c399895.jpg",
     "static/media/bachelorsDegree.930fb59c.png": "/static/media/bachelorsDegree.930fb59c.png",
     "static/media/certificateCollege.84fa3f18.png": "/static/media/certificateCollege.84fa3f18.png",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.26096b02.js",
-    "static/js/2.eb8a3bbf.chunk.js",
+    "static/js/2.f7274205.chunk.js",
     "static/css/main.f9e6b034.chunk.css",
-    "static/js/main.d79114e6.chunk.js"
+    "static/js/main.bb2a3d53.chunk.js"
   ]
 }
