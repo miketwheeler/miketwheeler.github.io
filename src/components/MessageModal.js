@@ -183,8 +183,15 @@ const MessageModal = () => {
 	function closeAndSubmit(event) {
 		event.preventDefault();
 		const messageRemovedDelimiters = message.replace(reMessage, " ");
-		const dirtyData = [checkVals.name.value, checkVals.title.value, checkVals.phone.value, checkVals.email.value, messageRemovedDelimiters];
 		let cleanData = [];
+		const dirtyData = [
+			checkVals.name.value, 
+			checkVals.title.value, 
+			checkVals.phone.value, 
+			checkVals.email.value, 
+			radioSelectionValue, 
+			messageRemovedDelimiters
+		];
 		dirtyData.forEach(item => cleanData.push(DOMPurify.sanitize(item)));
 		(
 			async() => {

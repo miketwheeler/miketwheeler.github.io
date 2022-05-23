@@ -2,8 +2,8 @@
 require('dotenv').config();
 
 const axios = require('axios');
-const korBaseUrl = "https://mikeytwheelerr.korconnect.io/sendGrid/v3/mail/send"
-const templateId = "d-a7cebc816ea24064bece6c96afdf3208"
+const kburl = process.env.REACT_APP_KOR_BASEURL;
+const templateId = process.env.REACT_APP_TEMPLATEID;
 
 
 async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, senderPermission, senderMessage) {
@@ -29,7 +29,7 @@ async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, se
 
     const config = {
         method: 'post',
-        url: korBaseUrl,
+        url: kburl,
         headers: {
             'x-api-key': process.env.REACT_APP_SG_PUBLIC_KEY, 
             'template_id': templateId, 
