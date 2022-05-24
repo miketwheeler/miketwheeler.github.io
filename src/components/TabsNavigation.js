@@ -3,7 +3,6 @@ import DegreeCerts from '../Sections/DegreeCerts';
 import Resume from '../Sections/Resume';
 import Projects from '../Sections/Projects';
 import TabsComponent from './TabsComponent';
-import { Typography } from '@mui/material';
 import HomeBannerComponent from './HomeBannerComponent';
 
 
@@ -13,13 +12,11 @@ function TabPanel(props) {
 	return (
 		<div id={`#${idname}`} aria-labelledby={idname} style={{ overflowY: 'hidden', backgroundColor: bgc }} { ...other }>
 			{ 
-                <Typography>{children}</Typography>
+                <>{children}</>
 			}
 		</div>
 	);
 }
-
-
 
 function TabsNavigation() {
     return (
@@ -29,15 +26,15 @@ function TabsNavigation() {
                 tabsInScroll={[
                     {
                         text: 'Resume',
-                        component: <TabPanel idName={'home'} bgc='#3b3b3b' children={<Resume />} />
+                        component: <TabPanel idname={'home'} bgc='#3b3b3b' children={<Resume />} />
                     },
                     {
                         text: 'Projects',
-                        component: <TabPanel idName={'projects'} bgc='#2b2b2b' children={<Projects />} />
+                        component: <TabPanel idname={'projects'} bgc='#2b2b2b' children={<Projects />} />
                     },
                     {
                         text: 'Education',
-                        component: <TabPanel idName={'education'} bgc='#3b3b3b' children={<DegreeCerts />} />
+                        component: <TabPanel idname={'education'} bgc='#3b3b3b' children={<DegreeCerts />} />
                     },
                     
                 ]} 

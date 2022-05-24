@@ -11,13 +11,13 @@ function Tools({which}) {
 				which === 'tools'
 				?
 					data.toolsList.map((item) => (
-						<a title={item.title} href={item.link} target="_blank" rel="noreferrer">
+						<a key={item.key} title={item.title} href={item.link} target="_blank" rel="noreferrer">
 							<img className={ContentStyles.icon} width="64" alt={item.altName} src={item.searchIcon} />
 						</a>
 					))
 				:
 					data.langsList.map((item) => (
-						<a title={item.title} href={item.link} target="_blank" rel="noreferrer">
+						<a key={item.key} title={item.title} href={item.link} target="_blank" rel="noreferrer">
 							<img className={ContentStyles.icon} width="64" alt={item.altName} src={item.searchIcon} />
 						</a>
 					))

@@ -15,7 +15,10 @@ const miniCardCont = {
     border: '1px solid #2b2b2b',
     borderRadius: '8px',
     boxShadow: '2px 2px 4px #2b2b2b',
-    '@media(max-width: 700px)' : { width: '60%', margin: '0 auto'}
+    '@media(maxWidth: 700px)' : { 
+        width: '60%', 
+        margin: '0 auto'
+    }
 };
 const toolbox = {
     display: 'flex', 

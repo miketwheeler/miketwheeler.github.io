@@ -1,5 +1,4 @@
 import React from 'react';
-// removed for app brevity
 import MessageModal from "./MessageModal.js"; 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -39,7 +38,6 @@ function ConnectionsComponent() {
                 <Button 
                     sx={pillButtonStyle}
                     size="small"
-                    flexGrow={1}
                     startIcon={<GitHubIcon />}
                     onClick={() => buttonAction('https://github.com/miketwheeler')}
                     >
@@ -54,7 +52,6 @@ function ConnectionsComponent() {
                         LinkedIn
                 </Button>
             </Box>
-            {/* Removed for app brevity */}
             <div style={modalPosition}>
                 <MessageModal id="message-modal" color="inherit" />
             </div>

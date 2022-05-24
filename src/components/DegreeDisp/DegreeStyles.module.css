@@ -1,52 +1,3 @@
-/* //////////////////////////////////////////////////// */
-/* Added Horizontal Headers to Group the Types of Certs */
-/* //////////////////////////////////////////////////// */
-/* Section Wrappers - must be separated unless find workaround */
-.acreditedWrapper {
-    border: 3px solid;
-	border-image-slice: 1;
-	border-width: 2px 0 0 40px;
-	border-image-source: linear-gradient(to bottom right, #2b2b2b, transparent, transparent);
-    min-height: 250px;
-    position: relative;
-    padding: 0px 15px;
-    margin-bottom: 40px;
-}
-.extracurricularWrapper {
-    border: 3px solid;
-	border-image-slice: 1;
-	border-width: 2px 0 0 40px;
-	border-image-source: linear-gradient(to bottom right, #2b2b2b, transparent, transparent);
-    min-height: 250px;
-    position: relative;
-    padding: 15px;
-}
-/* Section Headers */
-.acreditedSideHeader {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 800;
-    position: absolute;
-    top: 52px;
-    left: 0;
-    margin-left: -93px;
-    transform: rotate(270deg);
-    transform-origin: (0 0);
-}
-.extracurricularSideHeader {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 800;
-    position: absolute;
-    top: 108px;
-    left: 0;
-    margin-left: -147px;
-    transform: rotate(270deg);
-    transform-origin: (0 0);
-}
-
 /* ///////////////////////////////////////////////////////// */
 /* Stylings Here to Bottom for the Degree 'Cards' Themselves */
 /* ///////////////////////////////////////////////////////// */
@@ -58,29 +9,33 @@
     grid-template-areas: 
         "info media";
     margin: 18px auto;
+    padding-left: 10px;
 }
 .degreeTextSection {
     grid-area: info;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px auto 10px 0px;
+    margin: 0 auto 0 0;
     padding: 0px 4px;
     font-size: 90%;
 }
 .source {
     margin: 0;
+    font-weight: 100;
+    color: '#FFBC28';
+    padding: 0;
 }
 .location {
     font-weight: bolder;
     margin-bottom: 2px;
+
 }
 .dateComplete {
     padding-bottom: 8px;
     border-bottom: 1px dotted #2b2b2b;
     margin-bottom: 8px;
 }
-/* Horizontal Layout Image */
 .imageSection {
     grid-area: media;
 }
@@ -93,8 +48,8 @@
     margin-left: auto;
 }
 
+/* Narrow Layout Degree Cards */
 @media only screen and (max-width: 700px) {
-    /* Narrow Layout Degree Cards */
     .degreeCardContainer {
         display: grid;
         width: 100%;
@@ -109,13 +64,10 @@
     }
     .degreeTextSection {
         grid-area: vertInfo;
-        flex-direction: column;
-        justify-content: center;
         border-bottom: 2px solid #2b2b2b;
-        /* border-image-slice: 1;
-        border-width: 0px 1px 1px;
-        border-image-source: linear-gradient(to top, #2b2b2b, transparent); */
         padding-bottom: 20px;
+        margin: 0 auto;
+        width: 89%;
     }
     .source {
         margin: 0;
@@ -128,7 +80,6 @@
         padding-bottom: 8px;
         margin-bottom: 8px;
     }
-    /* Narrow Layout Image */
     .imageSection {
         grid-area: vertMedia;
         border: 4px solid transparent;

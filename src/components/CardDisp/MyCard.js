@@ -36,7 +36,7 @@ const featuredHeader = {
 	position: 'absolute',
 	top: 48,
 	left: 0,
-	marginLeft: -88,
+	marginLeft: "-82px",
 	transform: 'rotate(270deg)',
 	transformOrigin: '(0 0)',
 	marginRight: 40,
@@ -53,6 +53,17 @@ const featuredTitleBarStyle = {
 	display: 'flex',
 	justifyContent: 'space-between',
 	alignItems: 'flex-end'
+}
+const featuredGifContainerStyle = {
+	margin: '0 auto 20px',
+	'@media(max-width: 700px)': {
+		"&:hover": {
+			transform: 'scale(1.5)',
+			zIndex: 100,
+			transition: 'all ease-in-out 280ms',
+			boxShadow: '0px 2px 6px rgba(75, 75, 75, 0.527)'
+		}
+	}
 }
 
 function buttonAction(url) {
@@ -79,21 +90,7 @@ const MyCard = ({ ...props }) => {
 							</Typography>
 							<LilLogos logos={props.logos} />
 						</Grid>
-						<Grid 
-							item 
-							xs={10} 
-							sx={{
-								margin: '0 auto 20px',
-								'@media(max-width: 700px)': {
-									"&:hover": {
-										transform: 'scale(1.5)',
-										zIndex: 100,
-										transition: 'all ease-in-out 280ms',
-										boxShadow: '0px 2px 6px rgba(75, 75, 75, 0.527)'
-									}
-								}
-							}}
-							>
+						<Grid item xs={10} sx={featuredGifContainerStyle}>
 							<GetGif props={props.gifId} />
 						</Grid>
 						<Grid item xs={10} sx={{margin: '0 auto'}}>

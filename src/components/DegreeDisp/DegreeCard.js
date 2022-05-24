@@ -7,8 +7,15 @@ import UdemyDjangoReact from '../../static/images/udemyDjangoReact.png';
 import ComingSoon from '../../static/images/comingSoon.png';
 import FrontendNucamp from '../../static/images/frontendNucamp.png';
 import FullstackNucamp from '../../static/images/fullstackNucamp.png';
+import { Typography } from '@mui/material';
+import theme from '../../hooks/theme'
 
 
+const customTinyFaded = {
+    opacity: '40%',
+    wordSpacing: '3px',
+    marginTop: '8px'
+}
 const getDegree = (certName) => {
     switch(certName){
         case "Degree":
@@ -32,18 +39,18 @@ function DegreeCard({props}) {
     return (
         <div className={Ds.degreeCardContainer}>
             <div className={Ds.degreeTextSection}>
-                <h3 className={Ds.source}>
+                <Typography sx={theme.typography.yellowHeader}>
                     {props.source}
-                </h3>
+                </Typography>
                 <i className={Ds.location}>
                     {props.location}
                 </i>
                 <div className={Ds.dateComplete}>
                     {props.dateComplete}
                 </div>
-                <div className={Ds.blurb}>
+                <Typography sx={customTinyFaded}>
                     {props.blurb}
-                </div>
+                </Typography>
             </div>
 
             {/* Degree Image */}

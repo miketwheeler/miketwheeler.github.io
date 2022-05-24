@@ -1,5 +1,5 @@
 import React from 'react'
-// import data from '../hooks/data';
+
 
 const barStyle = {
     display: 'flex',
@@ -21,11 +21,11 @@ function LilLogos({logos}) {
         <div style={barStyle}>
             {
                 logos.map((item, i) => (
-                    <img style={imgStyle} alt='mini-logo' src={item} />
+                    <img key={i} style={imgStyle} alt='mini-logo' src={item} />
                 ))
             }
         </div>
     )
 }
 
-export default LilLogos ;
+export default LilLogos;

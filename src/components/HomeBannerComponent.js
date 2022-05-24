@@ -12,14 +12,14 @@ const cont = {
     justifyContent: 'space-between',
     marginBottom: '-30px',
     minHeight: '400px',
-    '@media(max-width: 800px)':{
+    '@media(maxWidth: 800px)':{
         marginBottom: '-10px'
     }
 }
 const leftItemUp = {
     marginLeft: '12%', 
     minWidth: '300px', 
-    '@media(max-width: 700px)':{
+    '@media(maxWidth: 700px)':{
         marginLeft: '40px'
     }
 }
@@ -31,7 +31,7 @@ const leftItemDown = {
     padding: '20px 0',
     justifyContent: 'center',
     float: 'right',
-    '@media(max-width: 700px)': {
+    '@media(maxWidth: 700px)': {
         paddingLeft: 0,
     }
 };
@@ -42,7 +42,7 @@ const rightItem = {
     width: 'fit-content',
     minWidth: '100px',
     paddingRight: '50px',
-    '@media(max-width: 550px)':{
+    '@media(maxWidth: 550px)':{
         display: 'none' 
     }
 };
@@ -62,7 +62,7 @@ const profileGraphic = {
     zIndex: '0',
 };
 const header4Style = { color: '#FFBC28', padding: '4px 8px 0 0' };
-const header3Style = { color: '#FFBC28', fontWeight: 100, padding: '40px 0px 20px' };
+const header3Style = { color: '#FFBC28', fontWeight: 100, padding: '40px 0px 0px', whiteSpace: 'nowrap' };
 const tagline = { maxWidth: 300, height: 'fit-content' };
 const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px' };
 const statsTextEls = { fontSize: 8, opacity: '50%', marginLeft: '8px', alignSelf: 'center' };
@@ -74,7 +74,7 @@ function HomeBannerComponent() {
     let [watchX, setWatchX] = useState(false);
 
     useEffect(() => {
-        const mql = window.matchMedia("(max-width: 600px)");
+        const mql = window.matchMedia("(maxWidth: 600px)");
         mql.addEventListener("change", resize);
         function resize(e){
             e.matches ? setWatchX(true) : setWatchX(false)
@@ -88,10 +88,15 @@ function HomeBannerComponent() {
         <Box component="div" sx={cont}>
             <div style={leftItemUp}>
                 <div style={{marginBottom: 'auto', marginTop: '20px'}}>
-                    <h1 style={header4Style}>Front End Developer</h1>
-                    <h2 style={tagline}>Engineering, Intuition and Passion</h2>
+                    <h1 style={header4Style}>Web Developer</h1>
+                    <h2 style={tagline}>Passion for Engineering and Mechanics</h2>
                     <h3 style={header3Style}>
-                        <code>{'<Some full-stack experience 😉 />'}</code>
+                        <code>{'<Frontend 🔥 />'}</code>
+                        <br />
+                        <code>{'<Some fullstack experience 🤙 />'}</code>
+                        <br />
+                        <code>{'<Always learning 🧑‍💻 />'}</code>
+                        {/* 🧑‍💻😉🤙💻🔥 */}
                     </h3>
                 </div>
                 <div style={leftItemDown}>

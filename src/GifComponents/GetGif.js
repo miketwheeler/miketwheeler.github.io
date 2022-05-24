@@ -13,7 +13,7 @@ function GetGif({props}) {
             setGif(data);
         }, []);
 
-        return gif && <Gif gif={gif} width={'100%'} hideAttribution noLink />;
+        return gif && <Gif gif={gif} width={'100%'} height="auto" hideAttribution noLink />;
     
     }
 
