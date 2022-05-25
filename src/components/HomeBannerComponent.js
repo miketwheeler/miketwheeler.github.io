@@ -12,19 +12,19 @@ const cont = {
     backgroundColor: '#2b2b2b',
     justifyContent: 'space-between',
     marginBottom: '-30px',
-    minHeight: '400px',
+    minHeight: '420px',
     '@media(maxWidth: 800px)':{
         marginBottom: '-10px'
     }
 }
 const leftContainer = {
-    marginLeft: '12%', 
+    marginLeft: '13%', 
     minWidth: '300px', 
     '@media(maxWidth: 700px)':{
         marginLeft: '40px'
     }
 }
-const leftUpperItem = { marginBottom: 'auto', marginTop: '20px' };
+const leftUpperItem = { marginTop: '20px' };
 const leftLowerItem = { 
     color: 'white',
     position: 'absolute',
@@ -67,6 +67,8 @@ const tabbyHeaders = { fontSize: 32, fontWeight: 500}
 function useWindowX() {
     const [watchX, setWatchX] = useState(false);
     const mql = window.matchMedia("(max-width: 500px)");
+    
+    // navigator.mediaDevices.enumerateDevices().then((med) => {console.log("media device type:",  med)})
 
     useEffect(() => {
         function handleResize(e) {
@@ -83,6 +85,8 @@ function useWindowX() {
 
 function HomeBannerComponent() {
     let currWatchX = useWindowX();
+    const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1;
+
 
     return (
         <Box component="div" sx={cont}>
@@ -129,7 +133,7 @@ function HomeBannerComponent() {
                 </div>
             </div>
             {
-                !currWatchX
+                (!isMobile && !currWatchX)
                 ?
                     <div style={rightItem}>
                         <img style={profileGraphic} alt="profile-graphic" src={yProfile} />
