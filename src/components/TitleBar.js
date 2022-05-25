@@ -12,7 +12,7 @@ const appBarStyle = {
     position: 'sticky'
 }
 const gridCont = {
-    padding: '24px 54px 24px 0px',
+    padding: '24px 6%',
     position: 'fixed',
     justifyContent: 'space-between',
     backgroundColor: '#2b2b2b',
@@ -24,7 +24,7 @@ const gridCont = {
     }
 }
 const gridContBottom = {
-    padding: '24px 54px 24px 0px',
+    padding: '24px 6%',
     justifyContent: 'space-between',
     backgroundColor: '#2b2b2b',
     maxWidth: '1023px',
@@ -38,7 +38,6 @@ const gridContBottom = {
 const nameContStyle = {
     fontWeight: 200, 
     display: 'flex',
-    marginLeft: '30px',
 }
 
 

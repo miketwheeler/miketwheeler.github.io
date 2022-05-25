@@ -1,6 +1,6 @@
 .documentLayout {
 	display: grid;
-	grid-template-columns: auto minmax(433px, 1023px) auto;
+	grid-template-columns: auto minmax(200px, 1023px) auto;
 	grid-template-areas: 
 		"emptyMarginLeft mainBody emptyMarginRight";
 	background-color: #1b1b1b;

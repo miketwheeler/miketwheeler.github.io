@@ -7,7 +7,7 @@ import TitleBar from './TitleBar.js'
 const container = {
     flexGrow: 1,
     backgroundColor: '#2b2b2b',
-    padding: '80px 54px',
+    padding: '80px 6%',
 }
 const leftSide = {
     '@media(max-width: 680px)': {

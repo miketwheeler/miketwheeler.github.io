@@ -1,22 +1,21 @@
 import React from 'react'
-import ContentStyles from '../components/Layout/ContentLayout.module.css';
 import CardDisp from '../components/CardDisp/CardDisp.js';
 import { Typography } from '@mui/material';
+import theme from '../hooks/theme';
 
-const tabHeading = {
-    fontSize: '56px', 
-    color: 'white', 
-    margin: '20px auto', 
-    opacity: '30%',
-    fontWeight: 500,
-    width: '100%'
+
+const container = {
+	padding: '40px 6% 100px',
+    '@media(max-width: 500px)': {
+        padding: '40px 2% 100px',
+    }
 }
 
 function Projects() {
 	return (
 		<div>
-			<div className={ContentStyles.contentConfig}>
-				<Typography sx={tabHeading}>Projects</Typography>
+			<div style={container}>
+				<Typography sx={theme.typography.bigTabPanelHeader}>Projects</Typography>
 				<CardDisp />
 			</div>
 		</div>

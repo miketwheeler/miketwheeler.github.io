@@ -1,8 +1,9 @@
 import React from 'react';
-import ContentStyles from './Layout/ContentLayout.module.css';
 import data from '../hooks/data';
 
-
+const iconStyle = {
+	margin: '15px 15px 0px 15px'
+}
 
 function Tools({which}) {
     return (
@@ -12,13 +13,13 @@ function Tools({which}) {
 				?
 					data.toolsList.map((item) => (
 						<a key={item.key} title={item.title} href={item.link} target="_blank" rel="noreferrer">
-							<img className={ContentStyles.icon} width="64" alt={item.altName} src={item.searchIcon} />
+							<img style={iconStyle} width="64" alt={item.altName} src={item.searchIcon} />
 						</a>
 					))
 				:
 					data.langsList.map((item) => (
 						<a key={item.key} title={item.title} href={item.link} target="_blank" rel="noreferrer">
-							<img className={ContentStyles.icon} width="64" alt={item.altName} src={item.searchIcon} />
+							<img style={iconStyle} width="64" alt={item.altName} src={item.searchIcon} />
 						</a>
 					))
 			}

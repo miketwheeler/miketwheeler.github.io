@@ -6,7 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 const containerStyle = {
     display: 'grid',
-    gridTemplateColumns: 'minmax(380px, 960px)',
+    gridTemplateColumns: 'minmax(0, 960px)',
     gridTemplateAreas: 'button',
     bottom: 10,
     zIndex: 300,
@@ -20,6 +20,9 @@ const buttonStyle = {
     boxShadow: '0 5px 10px #2b2b2b',
     zIndex: 110,
     gridArea: 'button',
+    '@media(max-width: 680px)': {
+        right: 0
+    }
 }
 const tooltipStyle = {
     color: '#FFBC28',

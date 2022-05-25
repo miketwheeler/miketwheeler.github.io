@@ -13,55 +13,50 @@ const cont = {
     justifyContent: 'space-between',
     marginBottom: '-30px',
     minHeight: '420px',
-    '@media(maxWidth: 800px)':{
-        marginBottom: '-10px'
-    }
-}
-const leftContainer = {
-    marginLeft: '13%', 
-    minWidth: '300px', 
-    '@media(maxWidth: 700px)':{
-        marginLeft: '40px'
+    paddingLeft: '13%',
+    flexGrow: 1,
+    '@media(max-width: 520px)':{
+        justifyContent: 'center',
+        textAlign: 'center',
+        paddingLeft: '0%',
     }
 }
 const leftUpperItem = { marginTop: '20px' };
 const leftLowerItem = { 
     color: 'white',
-    position: 'absolute',
-    margin: 'auto auto',
     display: 'flex',
     padding: '20px 0',
     justifyContent: 'center',
-    float: 'right',
-    '@media(maxWidth: 700px)': {
+    '@media(max-width: 500px)': {
         paddingLeft: 0,
+        margin: 0,
     }
 };
 const rightItem = { 
     display: 'block',
     alignItems: 'center', 
-    overflow: 'hidden', 
     width: 'fit-content',
-    minWidth: '100px',
-    paddingRight: '50px',
+    marginRight: '50px',
+    '@media(max-width: 500px)': {
+        display: 'none',
+        marginRight: 0,
+    }
 };
 const statsCont = { 
     display: 'flex', 
     position: 'static',
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    width: '100%',
-    maxWidth: '560px', 
-    minWidth: '380px',
+    flexDirection: 'row',
+    align: 'left',
+    paddingTop: '20px',
 };
 const profileGraphic = { 
     height: '430px',
     position: 'static', 
     zIndex: '0',
 };
-const tagline = { maxWidth: 300, height: 'fit-content' };
-const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px' };
-const statsTextEls = { fontSize: 8, opacity: '50%', marginLeft: '8px', alignSelf: 'center' };
+const tagline = { maxWidth: 400, height: 'fit-content',  '@media(max-width: 500px)': {maxWidth: 0, margin: '0 auto'} };
+const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px', justifyContent: 'center' };
+const statsTextEls = { fontSize: '10%', opacity: '50%', marginLeft: '6px', alignSelf: 'center', textAlign: 'left' };
 const tabbyHeaders = { fontSize: 32, fontWeight: 500}
 
 function useWindowX() {
@@ -87,10 +82,9 @@ function HomeBannerComponent() {
     let currWatchX = useWindowX();
     const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1;
 
-
     return (
         <Box component="div" sx={cont}>
-            <div style={leftContainer}>
+            <div>
                 <div style={leftUpperItem}>
                     <h1 style={theme.typography.h1style}>Web Developer</h1>
                     <h2 style={tagline}>Passion for Engineering and Mechanics</h2>

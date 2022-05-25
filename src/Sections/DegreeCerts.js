@@ -1,12 +1,19 @@
 import React from 'react'
-import ContentStyles from '../components/Layout/ContentLayout.module.css';
 import DegreeCard from '../components/DegreeDisp/DegreeCard.js';
 import data from '../hooks/data';
 import { Typography } from '@mui/material';
 import theme from '../hooks/theme';
 
 
-
+const container = {
+	flexDirection: 'column',
+	color: 'white',
+	justifyContent: 'center',
+	padding: '40px 6% 100px',
+    '@media(max-width: 500px)': {
+        padding: '40px 2% 100px',
+    }
+}
 const acreditedWrapper = {
     border: '3px solid',
 	borderImageSlice: 1,
@@ -26,7 +33,6 @@ const extracurricularWrapper = {
     position: 'relative',
     padding: '15px',
 }
-/* Section Headers */
 const acreditedSideHeader = {
     color: 'white',
     textTransform: 'uppercase',
@@ -57,7 +63,7 @@ const extracurricularSideHeader = {
 function DegreeCerts() {
 	return (
 		<div>
-			<div className={ContentStyles.contentConfig}>
+			<div style={container}>
 				<Typography sx={theme.typography.bigTabPanelHeader}>Education</Typography>
 				<div>
 					{/* Acredited Section */}

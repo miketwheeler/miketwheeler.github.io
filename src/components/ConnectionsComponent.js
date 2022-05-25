@@ -52,6 +52,7 @@ function ConnectionsComponent() {
                         LinkedIn
                 </Button>
             </Box>
+            {/* Removed for app brevity */}
             <div style={modalPosition}>
                 <MessageModal id="message-modal" color="inherit" />
             </div>

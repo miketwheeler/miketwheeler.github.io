@@ -1,11 +1,18 @@
 import React from 'react';
-import Box from "@mui/material/Box";
 import { Grid, Typography } from "@mui/material";
 import Tools from '../components/Tools';
 import theme from '../hooks/theme';
 
-const surroundingContainer = { flexGrow: 1, padding: '60px 54px 100px' };
-const gridCont = {justifyContent: 'space-between' };
+const surroundingContainer = { 
+    flexGrow: 1, 
+    padding: '40px 6% 100px',
+    '@media(max-width: 500px)': {
+        padding: '40px 2% 100px',
+    }
+};
+const gridCont = {
+    justifyContent: 'space-between',
+};
 const indivSectionTop = { margin: '0 auto 40px'};
 const indivSection = { marginBottom: '40px' }
 const miniCardCont = {
@@ -15,23 +22,20 @@ const miniCardCont = {
     border: '1px solid #2b2b2b',
     borderRadius: '8px',
     boxShadow: '2px 2px 4px #2b2b2b50',
-    '@media(maxWidth: 700px)' : { 
-        margin: '0 auto'
-    }
 };
 const toolbox = {
     display: 'flex', 
     flexWrap: 'wrap',
-    margin: '10px 20% 30px', 
+    margin: '10px 10% 30px', 
     height: 'fit-content', 
-    justifyContent: 'center', 
+    justifyContent: 'center',
 };
 const iconBox = { textAlign: 'center', marginTop: '20px' };
 
 
 function Resume() {
     return (
-        <Box component="div" sx={ surroundingContainer }>
+        <div style={ surroundingContainer }>
             {/* First grid section */}
             <Grid container sx={gridCont}>
                 <Grid item xs={12}>
@@ -135,7 +139,7 @@ function Resume() {
                     <Tools which={'tools'} />
                 </div>
             </div>
-        </Box>
+        </div>
     )
 }
 

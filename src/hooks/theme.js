@@ -21,12 +21,12 @@ const theme = createTheme({
         },
         h1style: {
             color: '#FFBC28',
-            padding: '4px 8px 0 0' 
+            // padding: '4px 8px 0 0' 
         },
         h3style: {
             color: '#FFBC28', 
             fontWeight: 100, 
-            padding: '40px 0px 0px', 
+            // padding: '40px 0px 0px', 
             whiteSpace: 'nowrap'
         },
         stressedOpaqueHeader: {

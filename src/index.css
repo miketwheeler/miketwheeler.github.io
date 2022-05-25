@@ -1,7 +1,6 @@
 html{
 	--scrollbarBG: #616161ee;
 	--thumbBG: #2b2b2b;
-	/* box-sizing: border-box; */
 }
 body {
 	margin: 0;
