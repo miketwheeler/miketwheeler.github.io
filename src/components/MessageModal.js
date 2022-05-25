@@ -48,15 +48,10 @@ const sxControlStyle = { margin:1, width: '100%', color: mainColor, backgroundCo
 const muiFieldStyle = {
 	'& .MuiFilledInput-input': { // mainly for autofilled content - it's standalone stylings are set separately
 		color: 'white',
-		'&:-webkit-autofill': {
-			'-webkit-box-shadow': `0 0 0 100px ${darkerGrey} inset`,
-			'-webkit-text-fill-color': 'white',
-		}
 	},
 	'& input:valid + fieldset': { // issue with bg color 
 		backgroundColor: darkerGrey
 	},
-
 	'& input:invalid + fieldset': { // invalids get red
 		borderColor: 'red',
 		color: 'red',
@@ -89,7 +84,6 @@ function CustomTextField({...props}) {
 				fullWidth
 				color="info"
 				variant='filled'
-				autoComplete
 				sx={sxControlStyle}
 				{...props}
 			/>
@@ -108,10 +102,11 @@ const MessageModal = () => {
 		phone: { value: "", message: "Please provide a valid Phone Number" },
 		email: { value: "", message: "Please provide a valid Email" },
 	});
-	const [isError, setIsError] = useState(false);
 	const [message, setMessage] = useState("");
 	const [radioSelectionValue, setRadioSelectionValue] = useState('yes');
+	const [isError, setIsError] = useState(false);
 	const docLabel = document.querySelector('.Mui-error');
+
 	const reNormString = /^([^0-9]*)$/;
 	const rePhone = /[0-9]/g;
 	const reEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -161,10 +156,13 @@ const MessageModal = () => {
 			})
 		}
 	}
-	// add a memo so only on change
+	// slight abuse of useEffect, only way concieved to track a document-error loosly in general
+	// 		much simpler than other methods - tradeoffs outweighed, this prevails
 	useEffect(() =>{
-		docLabel ? setIsError(true) : setIsError(false);
-	})
+		docLabel !== undefined && docLabel ? setIsError(true) : setIsError(false);
+		console.log(isError);
+	}, [docLabel, isError])
+
 	function resetForm() {
 		Object.defineProperties(checkVals, {
 			name: { value: "" },
@@ -238,7 +236,7 @@ const MessageModal = () => {
 							<CustomTextField 
 								id="name"
 								value={checkVals.name.value}
-								label="Name"
+								label="Full Name"
 								onChange={handleChange}
 								error={vetInputs('name')}
 								helperText={vetInputs('name') ? checkVals.name.message : null}
@@ -257,7 +255,7 @@ const MessageModal = () => {
 								label="Phone Number"
 								sx={sxControlStyle}
 								value={checkVals.phone.value}
-								autoComplete
+								// autoComplete
 								required
 								fullWidth
 								color='info'
@@ -317,7 +315,7 @@ const MessageModal = () => {
 								<FilledInput 
 									id='message'
 									multiline
-									fullwidth
+									fullWidth
 									rows={3} 
 									value={message} 
 									sx={muiFieldStyle} 

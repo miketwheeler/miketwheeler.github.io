@@ -5,6 +5,7 @@ import { makeStyles, withStyles } from "@mui/styles";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import theme from '../hooks/theme';
+import Footer from "./Footer";
 
 const tabHeight = 69; // individual height attr for the tab itself
 const panelTop = 160; // top set to position tab-contents-panel below sticky appbar & tabs heights
@@ -60,13 +61,13 @@ const useStyles = makeStyles((theme) => ({
         left: 0,
         right: 0,
         boxShadow: '0px 8px 6px #2b2b2b',
-        zIndex: 300,
+        zIndex: 100,
         '@media(max-width: 700px)': {
             top: 150,
         }
     },
     tabPanel: {
-        zIndex: 200
+        zIndex: 100
     }
 }));
 
@@ -118,7 +119,7 @@ function useThrottledOnScroll(callback, delay) {
     }, [throttledCallback]);
 }
 
-function TabNavigation(props) {
+function TabsComponent(props) {
     const [activeState, setActiveState] = useState(null);
     const { tabsInScroll } = props;
 
@@ -217,8 +218,9 @@ function TabNavigation(props) {
                     ))
                 }
             </div>
+            <Footer />
         </div>
     );
 }
 
-export default TabNavigation;
+export default TabsComponent;

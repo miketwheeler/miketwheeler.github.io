@@ -9,10 +9,8 @@ const containerStyle = {
     gridTemplateColumns: 'minmax(380px, 960px)',
     gridTemplateAreas: 'button',
     bottom: 10,
-    height: 'fit-content',
-    zIndex: 1020,
+    zIndex: 300,
     position: 'fixed',
-    flexGrow: 1,
 }
 const buttonStyle = {
     color: '#FFBC28',

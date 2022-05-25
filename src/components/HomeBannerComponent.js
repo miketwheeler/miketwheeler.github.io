@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import yProfile from '../static/images/profileCircle_y.png';
+import theme from '../hooks/theme';
 
 
 // grid - splits top area into roughly 2 halves
@@ -16,14 +17,15 @@ const cont = {
         marginBottom: '-10px'
     }
 }
-const leftItemUp = {
+const leftContainer = {
     marginLeft: '12%', 
     minWidth: '300px', 
     '@media(maxWidth: 700px)':{
         marginLeft: '40px'
     }
 }
-const leftItemDown = { 
+const leftUpperItem = { marginBottom: 'auto', marginTop: '20px' };
+const leftLowerItem = { 
     color: 'white',
     position: 'absolute',
     margin: 'auto auto',
@@ -42,9 +44,6 @@ const rightItem = {
     width: 'fit-content',
     minWidth: '100px',
     paddingRight: '50px',
-    '@media(maxWidth: 550px)':{
-        display: 'none' 
-    }
 };
 const statsCont = { 
     display: 'flex', 
@@ -56,50 +55,51 @@ const statsCont = {
     minWidth: '380px',
 };
 const profileGraphic = { 
-    overflow: 'hidden', 
     height: '430px',
     position: 'static', 
     zIndex: '0',
 };
-const header4Style = { color: '#FFBC28', padding: '4px 8px 0 0' };
-const header3Style = { color: '#FFBC28', fontWeight: 100, padding: '40px 0px 0px', whiteSpace: 'nowrap' };
 const tagline = { maxWidth: 300, height: 'fit-content' };
 const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px' };
 const statsTextEls = { fontSize: 8, opacity: '50%', marginLeft: '8px', alignSelf: 'center' };
 const tabbyHeaders = { fontSize: 32, fontWeight: 500}
 
+function useWindowX() {
+    const [watchX, setWatchX] = useState(false);
+    const mql = window.matchMedia("(max-width: 500px)");
+
+    useEffect(() => {
+        function handleResize(e) {
+            e.matches ? setWatchX(true) : setWatchX(false)
+        }
+        mql.addEventListener("change", handleResize);
+
+        return () => { mql.removeEventListener("change", handleResize) }
+    }, [])
+
+    return watchX;
+}
 
 
 function HomeBannerComponent() {
-    let [watchX, setWatchX] = useState(false);
-
-    useEffect(() => {
-        const mql = window.matchMedia("(maxWidth: 600px)");
-        mql.addEventListener("change", resize);
-        function resize(e){
-            e.matches ? setWatchX(true) : setWatchX(false)
-        }
-        return () => {
-            mql.removeEventListener("change", resize);
-        }
-    },[])
+    let currWatchX = useWindowX();
 
     return (
         <Box component="div" sx={cont}>
-            <div style={leftItemUp}>
-                <div style={{marginBottom: 'auto', marginTop: '20px'}}>
-                    <h1 style={header4Style}>Web Developer</h1>
+            <div style={leftContainer}>
+                <div style={leftUpperItem}>
+                    <h1 style={theme.typography.h1style}>Web Developer</h1>
                     <h2 style={tagline}>Passion for Engineering and Mechanics</h2>
-                    <h3 style={header3Style}>
+                    <h3 style={theme.typography.h3style}>
                         <code>{'<Frontend 🔥 />'}</code>
                         <br />
                         <code>{'<Some fullstack experience 🤙 />'}</code>
                         <br />
                         <code>{'<Always learning 🧑‍💻 />'}</code>
-                        {/* 🧑‍💻😉🤙💻🔥 */}
+                        {/* 🧑‍💻😉🤙👌💻🔥 */}
                     </h3>
                 </div>
-                <div style={leftItemDown}>
+                <div style={leftLowerItem}>
                     <div style={statsCont}>
                         <div style={statsStyles}>
                             <Typography sx={tabbyHeaders}>
@@ -129,7 +129,7 @@ function HomeBannerComponent() {
                 </div>
             </div>
             {
-                !watchX
+                !currWatchX
                 ?
                     <div style={rightItem}>
                         <img style={profileGraphic} alt="profile-graphic" src={yProfile} />

@@ -19,15 +19,24 @@ const theme = createTheme({
             padding: 0,
             margin: 0,
         },
+        h1style: {
+            color: '#FFBC28',
+            padding: '4px 8px 0 0' 
+        },
+        h3style: {
+            color: '#FFBC28', 
+            fontWeight: 100, 
+            padding: '40px 0px 0px', 
+            whiteSpace: 'nowrap'
+        },
         stressedOpaqueHeader: {
             fontSize: 32,
             fontWeight: 100,
             marginTop: '12px',
         },
         listStyle: {
-            listStyle: 'none',
             margin: 0,
-            padding: 0,
+            padding: '0 18px',
             opacity: '40%',
         },
         bigTabPanelHeader: {

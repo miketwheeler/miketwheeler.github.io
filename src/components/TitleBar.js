@@ -28,13 +28,19 @@ const gridContBottom = {
     justifyContent: 'space-between',
     backgroundColor: '#2b2b2b',
     maxWidth: '1023px',
-    '@media(max-width: 700px)': { justifyContent: 'center', height: 150 }
+    zIndex: 0,
+    '@media(max-width: 700px)': { 
+        justifyContent: 'center',
+        padding: '24px 0px',
+        height: 151 
+    }
 }
 const nameContStyle = {
     fontWeight: 200, 
     display: 'flex',
     marginLeft: '30px',
 }
+
 
 function TitleBar({pos}) {    
     return (

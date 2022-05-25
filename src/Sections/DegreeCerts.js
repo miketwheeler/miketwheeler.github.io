@@ -26,6 +26,7 @@ const extracurricularWrapper = {
     position: 'relative',
     padding: '15px',
 }
+/* Section Headers */
 const acreditedSideHeader = {
     color: 'white',
     textTransform: 'uppercase',
@@ -50,6 +51,8 @@ const extracurricularSideHeader = {
     transform: 'rotate(270deg)',
     transformOrigin: '(0 0)',
 }
+
+
 
 function DegreeCerts() {
 	return (

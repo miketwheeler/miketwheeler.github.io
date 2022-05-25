@@ -4,19 +4,18 @@ import { Grid, Typography } from "@mui/material";
 import Tools from '../components/Tools';
 import theme from '../hooks/theme';
 
-const surroundingContainer = { flexGrow: 1, margin: '60px auto 100px' };
-const gridCont = { padding: '0 54px', justifyContent: 'space-between' };
+const surroundingContainer = { flexGrow: 1, padding: '60px 54px 100px' };
+const gridCont = {justifyContent: 'space-between' };
 const indivSectionTop = { margin: '0 auto 40px'};
 const indivSection = { marginBottom: '40px' }
 const miniCardCont = {
     padding: '18px 30px',
-    marginBottom: '4px',
-    background: '#2b2b2b24',
+    marginBottom: '6px',
+    background: '#28282960',
     border: '1px solid #2b2b2b',
     borderRadius: '8px',
-    boxShadow: '2px 2px 4px #2b2b2b',
+    boxShadow: '2px 2px 4px #2b2b2b50',
     '@media(maxWidth: 700px)' : { 
-        width: '60%', 
         margin: '0 auto'
     }
 };
@@ -41,26 +40,26 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item xs={12} md={5} sx={indivSectionTop}>
+                <Grid item xs={12} sm={10} md={5} sx={indivSectionTop}>
                     <div style={miniCardCont}>
-                        <h3 style={theme.typography.yellowHeader}>Experience</h3>
+                        <Typography sx={theme.typography.yellowHeader}>Experience</Typography>
                         <ul style={theme.typography.listStyle}>
                             <li>1.5 years web development</li>
                             <li>12 years customer service</li>
                         </ul>
                     </div>
                     <div style={miniCardCont}>
-                        <h3 style={theme.typography.yellowHeader}>Qualifications</h3>
+                        <Typography sx={theme.typography.yellowHeader}>Qualifications</Typography>
                         <ul style={theme.typography.listStyle}>
                             <li>4+ years web development & IS&T education</li>
                             <li>2 published websites, 1 project WIP</li>
                         </ul>
                     </div>
                     <div style={miniCardCont}>
-                        <h3 style={theme.typography.yellowHeader}>Languages</h3>
+                        <Typography sx={theme.typography.yellowHeader}>Languages</Typography>
                         <ul style={theme.typography.listStyle}>
-                            <li>Great with Javascript, practiced with python and Java</li>
-                            <li>Wanting to learn more C# .Net</li>
+                            <li>Great with Javascript, practiced with Python and Java</li>
+                            <li>Always working toward mastery</li>
                         </ul>
                     </div>
                 </Grid>

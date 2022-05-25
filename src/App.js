@@ -4,7 +4,6 @@ import './App.css';
 import Layout from './components/Layout/Layout.js'
 import TitleBar from './components/TitleBar.js';
 import { BrowserRouter } from 'react-router-dom';
-import Footer from './components/Footer';
 import ToTop from './components/ToTop';
 import TabsNavigation from './components/TabsNavigation';
 
@@ -26,8 +25,6 @@ function App() {
 					<TabsNavigation />
 				</BrowserRouter>
 				{ showButton ? <ToTop /> : null }
-				<Footer />
-				<div style={{backgroundColor: '#2b2b2b', height: '60px'}} />
 			</Layout>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 const barStyle = {
     display: 'flex',
     backgroundColor: '#2b2b2b74',
