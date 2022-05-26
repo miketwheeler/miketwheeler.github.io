@@ -27,14 +27,14 @@ const style = {
 	transform: 'translate(-50%, -50%)',
 	width: '52%',
 	maxWidth: '600px',
-	minWidth: '358px',
+	minWidth: '270px',
 	bgcolor: secondaryColor,
 	zIndex: 900,
 	boxShadow: 24,
 	color: 'white',
 	pl: 4,
 	pr: 6,
-	py: 6,
+	py: 8,
 	borderRadius: 3,
 };
 const fancyButtonStyle = {
@@ -48,6 +48,11 @@ const sxControlStyle = { margin:1, width: '100%', color: mainColor, backgroundCo
 const muiFieldStyle = {
 	'& .MuiFilledInput-input': { // mainly for autofilled content - it's standalone stylings are set separately
 		color: 'white',
+		backgroundColor: darkerGrey,
+		'&:-webkit-autofill': {
+			'-webkit-box-shadow': `0 0 10px 100px ${darkerGrey} inset`,
+			'-webkit-text-fill-color': 'white',
+		}
 	},
 	'& input:valid + fieldset': { // issue with bg color 
 		backgroundColor: darkerGrey

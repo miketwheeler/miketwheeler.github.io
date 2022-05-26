@@ -6,48 +6,60 @@ import theme from '../hooks/theme';
 
 
 // grid - splits top area into roughly 2 halves
-const cont = {
-    display: "flex", 
-    paddingTop: '141px', 
-    backgroundColor: '#2b2b2b',
-    justifyContent: 'space-between',
-    marginBottom: '-30px',
-    minHeight: '420px',
-    paddingLeft: '13%',
-    flexGrow: 1,
-    '@media(max-width: 520px)':{
-        justifyContent: 'center',
-        textAlign: 'center',
+const container = {
+    '@media(max-width: 500px)':{
+        marginBottom: 0,
         paddingLeft: '0%',
-    }
+        textAlign: 'center',
+        paddingTop: '122px',
+        justifyContent: 'center'
+    },
+    display: "flex", 
+    flexGrow: 1,
+    minHeight: '260px',
+    paddingTop: '141px', 
+    paddingLeft: '13%',
+    marginBottom: '-44px',
+    backgroundColor: '#2b2b2b',
 }
-const leftUpperItem = { marginTop: '20px' };
-const leftLowerItem = { 
-    color: 'white',
-    display: 'flex',
-    padding: '20px 0',
-    justifyContent: 'center',
-    '@media(max-width: 500px)': {
-        paddingLeft: 0,
-        margin: 0,
-    }
+const leftUpperItem = { 
+    '@media(max-width: 500px)':{
+        padding: '0%',
+        width: '100%'
+    },
+    marginBottom: '20px',
+    marginTop: '5%',
 };
-const rightItem = { 
+const leftLowerItem = { 
+    '@media(max-width: 500px)': {
+        width: '100%',
+        marginTop: 0,
+    },
+    display: 'flex',
+    alignItems: 'center',
+    height: '20%',
+};
+const statsContainer = { 
+    '@media(max-width: 500px)': {
+        width: '100%',
+    },
+    display: 'flex', 
+    color: 'white',
+    maxWidth: '300px',
+    height: 'fit-content',
+    margin: 'auto auto',
+};
+
+const rightSideContent = { 
+    '@media(max-width: 500px)': {
+        display: 'none',
+        paddingRight: 0,
+    },
     display: 'block',
     alignItems: 'center', 
     width: 'fit-content',
-    marginRight: '50px',
-    '@media(max-width: 500px)': {
-        display: 'none',
-        marginRight: 0,
-    }
-};
-const statsCont = { 
-    display: 'flex', 
-    position: 'static',
-    flexDirection: 'row',
-    align: 'left',
-    paddingTop: '20px',
+    overflow: 'hidden',
+    paddingRight: '50px',
 };
 const profileGraphic = { 
     height: '430px',
@@ -55,9 +67,9 @@ const profileGraphic = {
     zIndex: '0',
 };
 const tagline = { maxWidth: 400, height: 'fit-content',  '@media(max-width: 500px)': {maxWidth: 0, margin: '0 auto'} };
-const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px', justifyContent: 'center' };
+const statsStyles = { display: 'flex', flexDirection: 'row', width: '120px' };
 const statsTextEls = { fontSize: '10%', opacity: '50%', marginLeft: '6px', alignSelf: 'center', textAlign: 'left' };
-const tabbyHeaders = { fontSize: 32, fontWeight: 500}
+const tabbyHeaders = { fontSize: 32, fontWeight: 500, alignSelf: 'center'}
 
 function useWindowX() {
     const [watchX, setWatchX] = useState(false);
@@ -83,7 +95,7 @@ function HomeBannerComponent() {
     const isMobile = localStorage.mobile || window.navigator.maxTouchPoints > 1;
 
     return (
-        <Box component="div" sx={cont}>
+        <Box component="div" sx={container}>
             <div>
                 <div style={leftUpperItem}>
                     <h1 style={theme.typography.h1style}>Web Developer</h1>
@@ -98,7 +110,7 @@ function HomeBannerComponent() {
                     </h3>
                 </div>
                 <div style={leftLowerItem}>
-                    <div style={statsCont}>
+                    <div style={statsContainer}>
                         <div style={statsStyles}>
                             <Typography sx={tabbyHeaders}>
                                 BS
@@ -129,7 +141,7 @@ function HomeBannerComponent() {
             {
                 (!isMobile && !currWatchX)
                 ?
-                    <div style={rightItem}>
+                    <div style={rightSideContent}>
                         <img style={profileGraphic} alt="profile-graphic" src={yProfile} />
                     </div>
                 :

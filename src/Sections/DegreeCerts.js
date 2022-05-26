@@ -33,15 +33,16 @@ const extracurricularWrapper = {
     position: 'relative',
     padding: '15px',
 }
+/* Section Headers */
 const acreditedSideHeader = {
     color: 'white',
     textTransform: 'uppercase',
     letterSpacing: '3px',
     fontWeight: 800,
     position: 'absolute',
-    top: '52px',
+    top: '60px',
     left: 0,
-    marginLeft: '-88px',
+    marginLeft: '-94px',
     transform: 'rotate(270deg)',
     transformOrigin: '(0 0)',
 }
@@ -69,7 +70,7 @@ function DegreeCerts() {
 					{/* Acredited Section */}
 					<div style={acreditedWrapper}>
 						<h3 style={acreditedSideHeader}>
-							Acredited
+							Accredited
 						</h3>
 						<DegreeCard props={data.degreeCardData.collegeDegree} />
 						<DegreeCard props={data.degreeCardData.collegeCert} />

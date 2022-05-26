@@ -16,9 +16,8 @@ const fancyButtonStyle = {
 const highlightCont = {
 	border: '1px solid #3b3b3b74',
 	backgroundColor: '#3b3b3b74',
-	borderRadius: '18px',
+	borderRadius: '28px',
 	padding: '18px',
-	// minWidth: '320px'
 }
 const featuredWrapper = {
 	border: '3px solid black',
@@ -26,7 +25,6 @@ const featuredWrapper = {
 	borderWidth: '2px 0 0 40px',
 	borderImageSource: 'linear-gradient(to bottom right, #2b2b2b, transparent, transparent)',
 	position: 'relative',
-	// padding: '18px',
 }
 const featuredHeader = {
 	color: 'white',
