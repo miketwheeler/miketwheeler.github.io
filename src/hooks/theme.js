@@ -19,14 +19,16 @@ const theme = createTheme({
             padding: 0,
             margin: 0,
         },
+        specialLargerText: {
+            fontWeight: 500,
+            fontSize: 26,
+        },
         h1style: {
             color: '#FFBC28',
-            // padding: '4px 8px 0 0' 
         },
         h3style: {
             color: '#FFBC28', 
             fontWeight: 100, 
-            // padding: '40px 0px 0px', 
             whiteSpace: 'nowrap'
         },
         stressedOpaqueHeader: {

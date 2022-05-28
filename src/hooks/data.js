@@ -151,7 +151,7 @@ const data = {
         },
         {
             "key": 7,
-            "title": "Django",
+            "title": "Django Framework & Django Rest Framework",
             "link": "https://www.djangoproject.com/",
             "linkedImgSource": "https://icon-library.com/icon/django-icon-0.html.html",
             "altName": "Django Icon",
@@ -159,13 +159,12 @@ const data = {
         }
     ],
 
-// react/django proshop -> id => akBn1xWokfYQZKrxHb
-// JS guessNumberGame -> id => XWXB0XqZPJASSZ9HQA
-// js dice game = id => ZCJVxraUXAPVmHo1m7
-// next.js Meetups clone = id => BmVjF9nkmsghyHCvcc
-// next.js-React.js (H&W stair and rail) Hybrid = id => 5362vGll2WQMOXVJDk
-// nucamp Bootstrap App = id => l6xLarRafOXpEOlOGk
-// React, MUI, BStrap Profile = id => 
+// react/django proshop ->  akBn1xWokfYQZKrxHb
+// JS guessNumberGame ->  XWXB0XqZPJASSZ9HQA
+// js dice game -> ZCJVxraUXAPVmHo1m7
+// next.js Meetups clone -> BmVjF9nkmsghyHCvcc
+// next.js-React.js (H&W stair and rail) -> 5362vGll2WQMOXVJDk
+// nucamp Bootstrap App -> l6xLarRafOXpEOlOGk
 
     projectCardList: [
         {
@@ -207,79 +206,55 @@ const data = {
             cardTitle: "Meetups Clone - Next.js",
             cardDescription: "Built in sister-framework-to-React, Next.js. Similar events & function to that of the Meetups App. Limited to displaying events, and then browsable further on Selection. Practice using Next.js's router with dynamic routes.",
             projectLink: "https://github.com/miketwheeler/React-MeetupsApp",
-            logoList: [Js, Css, Html], // ADD NextJs
+            logoList: [Js, Css, Html],
         },
         {
             gifId: "ZCJVxraUXAPVmHo1m7",
             imageTitle: "javascript-dice-game",
             cardTitle: "Javascript Dice Game",
-            cardDescription: "Web app Dice Game built in React. Graphics, idea, and other code belongs to a tutorial.",
+            cardDescription: "Web app Dice Game built in React. Graphics, idea and other code belongs to a tutorial.",
             projectLink: "https://github.com/miketwheeler/javaScriptProjects/tree/main/%233-JSproject",
             logoList: [Js, Css, Html]
         },
         // {
-        // 	gifId: "https://google.com",
-        // 	imageTitle: "Placeholder",
-        // 	cardTitle: "This Profile Site",
-        // 	cardDescription: "This site was built in React with Material UI components and personalized components.",
-        // },
-        // {
-        // 	gifId: "https://google.com",
-        // 	imageTitle: "Placeholder",
-        // 	cardTitle: "Calendar Web App",
-        // 	cardDescription: "Simple Javascript calendar tutorial.",
-        // },
-        // {
-        // 	gifId: "https://google.com",
-        // 	imageTitle: "Placeholder",
-        // 	cardTitle: "Next.js and Strapi",
-        // 	cardDescription: "Ecommerce tutorial app using Next.js and Strapi for the backend. ",
-        // },
-        // {
-        // 	gifId: "https://google.com",
-        // 	imageTitle: "Flutter App",
-        // 	cardTitle: "Flutter App",
-        // 	cardDescription: "Developed with the Flutter ecosystem with datastorage in Firebase.",
+        // 	gifId: "placeholderUrl",
+        // 	imageTitle: "placeholderImageTitle",
+        // 	cardTitle: "placeholderTitle",
+        // 	cardDescription: "placeholderDescription",
         // },
     ],
     degreeCardData: {
         collegeDegree: {
-            image: "Degree", 
             source: "University of Nebraska at Omaha", 
             location: "Omaha, Nebraska", 
             dateComplete: "Graduated - 12/2019",
             blurb: "Bachelors of Sciences in Management Information Systems. Completed courses in many aspects of software development, design, and managment. "
         },
         collegeCert: {
-            image: "Certificate", 
             source: "University of Nebraska at Omaha", 
             location: "Omaha, Nebraska", 
             dateComplete: "Awarded - 12/2019",
             blurb: "Certificate in Systems Development was earned alongside the Degree. Classes taken included project management, upwards to advanced database design and information architecture."
         },
         onlineBlazor: {
-            image: "BlazorCert", 
             source: "Blazor Apps & C#", 
             location: "Virtual at Udemy.com", 
             dateComplete: "02/2021",
             blurb: "A complete fullstack course on developing apps with Microsoft's Blazor Framework in C#. This included model-view-controller schema, database, creating the server and client sides, and deployment. (No longer up on the web)"
         },
         onlineReact: {
-            image: "DjangoReactCert", 
             source: "Django Framework & React.js", 
             location: "Virtual at Udemy.com", 
             dateComplete: "10/2020",
             blurb: "Developed, fullstack, an application using Python and Django's REST Framework for the backend and React for the frontend."
         },
         fullstackNucamp: {
-            image: "FullstackNucamp", 
             source: "Nucamp Fullstack Bootcamp", 
             location: "Online - Redmond, Washington",
             dateComplete: "04/2022",
             blurb: "A 5-part Bootcamp with classes in Bootstrap, React.js, React Native, setting up the server and full deployment."
         },
         frontendNucamp: {
-            image: "FrontendNucamp", 
             source: "Nucamp Frontend Bootcamp", 
             location: "Online - Redmond, Washington",
             dateComplete: "04/2022",

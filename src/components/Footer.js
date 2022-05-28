@@ -2,7 +2,8 @@ import { Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import Grid from '@mui/material/Grid';
-import TitleBar from './TitleBar.js'
+import TitleBar from './TitleBar.js';
+import emailGraphic from '../static/images/emailGraphic.png'
 
 const container = {
     flexGrow: 1,
@@ -21,9 +22,24 @@ const rightSide = {
     },
     '@media(max-width: 600px)': {
         textAlign: 'center',
+        justifyContent: 'center',
         marginTop: '20px',
     },
 }
+const emailContainer = {
+    margin: '14px 0 0',
+    height: '100%',
+    border: '1px dashed pink',
+}
+const emailImage = {
+    minWidth: '100px',
+    maxWidth: '310px',
+    margin: 0,
+    '@media(max-width: 600px)': {
+        margin: '0 auto'
+    }
+}
+const coloredBarPlaceholder = { backgroundColor: '#2b2b2b', height: '70px' }
 
 
 function Footer() {
@@ -47,14 +63,17 @@ function Footer() {
                             <div>
                                 <Typography sx={{marginBottom: '24px', fontSize: '1rem', opacity: '50%'}}>Information</Typography>
                                 <Typography sx={{fontSize: '1.1rem', opacity: '55%'}}>Redmond, Washington</Typography>
-                                <Typography sx={{fontSize: '1.3rem'}}>mikeytwheeler@gmail.com</Typography>
+                                {/* <Typography sx={{fontSize: '1.3rem'}}>mikeytwheeler@gmail.com</Typography> */}
+                                <div style={emailContainer}>
+                                    <img alt="email-address" aria-label="email-picture"src={emailGraphic} style={emailImage} />
+                                </div>
                             </div>
                         </Box>
                     </Grid>
                 </Grid> 
             </Box>
             <TitleBar pos={''} />
-            <div style={{backgroundColor: '#2b2b2b', height: '70px'}} />
+            <div style={coloredBarPlaceholder} />
         </>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import DegreeCard from '../components/DegreeDisp/DegreeCard.js';
+import DegreeCard from '../components/CardDisp/DegreeCard.js';
 import data from '../hooks/data';
 import { Typography } from '@mui/material';
 import theme from '../hooks/theme';

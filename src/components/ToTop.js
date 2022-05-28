@@ -16,7 +16,7 @@ const buttonStyle = {
     color: '#FFBC28',
     padding:'1px',
     float: 'right',
-    right: 40,
+    right: 4,
     boxShadow: '0 5px 10px #2b2b2b',
     zIndex: 110,
     gridArea: 'button',

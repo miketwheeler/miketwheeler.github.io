@@ -27,7 +27,7 @@ function TabsNavigation() {
             <TabsComponent  
                 tabsInScroll={[
                     {
-                        text: 'Resume',
+                        text: 'Introduction',
                         component: <TabPanel idname={'home'} bgc='#3b3b3b' children={<Resume />} />
                     },
                     {

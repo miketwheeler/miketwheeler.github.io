@@ -14,9 +14,8 @@ import NumberFormat from 'react-number-format';
 import DOMPurify from 'dompurify';
 
 
-///////////////////////////////////////////////////////////////////
-// Styled Components (and Fixes to Sys Appl Styles)
-///////////////////////////////////////////////////////////////////
+
+// Styles and Fixes to mui Sys Styles
 const mainColor = '#FFBC28';
 const secondaryColor = '#2b2b2b';
 const darkerGrey = '#282829';
@@ -29,13 +28,17 @@ const style = {
 	maxWidth: '600px',
 	minWidth: '270px',
 	bgcolor: secondaryColor,
-	zIndex: 900,
 	boxShadow: 24,
 	color: 'white',
 	pl: 4,
 	pr: 6,
 	py: 8,
 	borderRadius: 3,
+	zIndex: 100,
+	'@media(max-height: 890px)': {
+		top: '0',
+		transform: 'translate(-50%, 0%)'
+	}
 };
 const fancyButtonStyle = {
 	backgroundColor: 'transparent',
@@ -46,7 +49,7 @@ const fancyButtonStyle = {
 const sxLableStyle = { color: mainColor };
 const sxControlStyle = { margin:1, width: '100%', color: mainColor, backgroundColor: darkerGrey };
 const muiFieldStyle = {
-	'& .MuiFilledInput-input': { // mainly for autofilled content - it's standalone stylings are set separately
+	'& .MuiFilledInput-input': { // mainly for autofilled content - its standalone stylings are set separately
 		color: 'white',
 		backgroundColor: darkerGrey,
 		'&:-webkit-autofill': {
@@ -78,7 +81,7 @@ const radioFormLabel = { color: mainColor, ml: 2 };
 const MyTextField = styled(TextField)(muiFieldStyle);
 const MyNumberField = styled(NumberFormat)(muiFieldStyle);
 
-// common attributes across 'most of the fields - needed space, 
+// common attributes across most of the fields - needed space 
 function CustomTextField({...props}) {
 	return (
 		<>
@@ -202,7 +205,7 @@ const MessageModal = () => {
 					await sGSendEmail(...cleanData)
 				} 
 				catch(err) {
-					console.log("Error on FE: ", err)
+					console.log("There was an error: ", err)
 				}
 			}
 		)();
@@ -220,7 +223,16 @@ const MessageModal = () => {
 					</Typography>
 				</Button>
 				{/* The MessageModal */}
-				<Modal open={open} onClose={() => setOpen(false)} aria-labelledby="modal-title" aria-describedby="modal-description" disableScrollLock={true}>
+				<Modal 
+					open={open} 
+					onClose={() => setOpen(false)} 
+					aria-labelledby="modal-title" 
+					aria-describedby="modal-description" 
+					disableScrollLock={false} 
+					sx={{
+						overflowY: 'scroll', 
+					}}
+					>
 					<Box sx={style} component="form" id="form" onSubmit={closeAndSubmit}>
 						<Typography id="modal-title" sx={modalTypographyTitle} variant="h5" component="h2">
 							Contact Me

@@ -12,9 +12,10 @@ const surroundingContainer = {
 };
 const gridCont = {
     justifyContent: 'space-between',
+    gap: 2,
 };
-const indivSectionTop = { margin: '0 auto 40px'};
-const indivSection = { marginBottom: '40px' }
+const sectionTopLeft = { margin: '0 0 40px'};
+const sectionGeneral = { marginBottom: '40px' }
 const miniCardCont = {
     padding: '18px 30px',
     marginBottom: '6px',
@@ -40,54 +41,59 @@ function Resume() {
             <Grid container sx={gridCont}>
                 <Grid item xs={12}>
                     <Typography sx={theme.typography.bigTabPanelHeader}>
-                        Resum&eacute;
+                        Introduction
                     </Typography>
                 </Grid>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item xs={12} sm={10} md={5} sx={indivSectionTop}>
+                <Grid item xs={12} md={5} sx={sectionTopLeft}>
                     <div style={miniCardCont}>
-                        <Typography sx={theme.typography.yellowHeader}>Experience</Typography>
-                        <ul style={theme.typography.listStyle}>
-                            <li>1.5 years web development</li>
-                            <li>12 years customer service</li>
-                        </ul>
+                        <Typography sx={theme.typography.specialLargerText}>Skills</Typography>
+                        <Typography sx={theme.typography.tinyFaded}>
+                            <ul style={theme.typography.listStyle}>
+                                <li>Javascript</li>
+                                <li>React.js</li>
+                                <li>API Integration</li>
+                                <li>Reusable Components</li>
+                                <li>Material UI & Bootstrap</li>
+                                <li>HTML & CSS</li>
+                                <li>Agile / Kanban / Scrum</li>
+                            </ul>
+                        </Typography>
                     </div>
                     <div style={miniCardCont}>
-                        <Typography sx={theme.typography.yellowHeader}>Qualifications</Typography>
-                        <ul style={theme.typography.listStyle}>
-                            <li>4+ years web development & IS&T education</li>
-                            <li>2 published websites, 1 project WIP</li>
-                        </ul>
-                    </div>
-                    <div style={miniCardCont}>
-                        <Typography sx={theme.typography.yellowHeader}>Languages</Typography>
-                        <ul style={theme.typography.listStyle}>
-                            <li>Great with Javascript, practiced with Python and Java</li>
-                            <li>Always working toward mastery</li>
-                        </ul>
+                        <Typography sx={theme.typography.specialLargerText}>Secondaries</Typography>
+                        <Typography sx={theme.typography.tinyFaded}>
+                            <ul style={theme.typography.listStyle}>
+                                <li>Python & Django</li>
+                                <li>Relational DBs - SQL</li>
+                                <li>MongoDB & Firebase - NoSQL</li>
+                                <li>Adobe Suite Apps</li>
+                            </ul>
+                        </Typography>
                     </div>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item xs={12} md={5.75} sx={indivSection}>
+                <Grid item xs={12} md={5.75} sx={sectionGeneral}>
                     <Typography sx={theme.typography.tinyFaded}>
                         Welcome to my Profile
                     </Typography>
                     <Typography sx={theme.typography.stressedOpaqueHeader}>
-                        I'm Mike Wheeler
+                        Hi, I'm Mike Wheeler
                     </Typography>
                     <div>
                         <br/>
                         <Typography sx={theme.typography.slantText}>
-                            I am currently looking for position in web development
+                            I love to code, I strive for a solution no matter the problem, I'm motivated and contiuously improve
                         </Typography>
                         <Typography sx={theme.typography.tinyFaded}> 
                             <br />
-                            I have a bit over a year and half of experience in web development and am looking forward to 
-                            continuing on in this line of work.
+                            I welcome new programming languages, frameworks or libraries
                             <br />
                             <br />
-                            I'm no stranger to learning about a new programming language, library, or framework. I believe 
-                            that good work that stands for itself and makes a difference.                             
+                            Others would describe me as intunitive, flexible, adaptive, investigative and reliable
+                            <br />
+                            <br />
+                            I believe work that can stand for itself <i>and</i> make a difference.                             
                         </Typography>
                     </div>
                 </Grid>
@@ -104,7 +110,7 @@ function Resume() {
             {/* Second-mid grid section */}
             <Grid container sx={gridCont}>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item md={5.75} sx={indivSection}>
+                <Grid item md={5.75} sx={sectionGeneral}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         Being fairly well versed in javascript-based frontends, I continue to work toward learning 
@@ -118,7 +124,7 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item md={5.75} sx={indivSection}>
+                <Grid item md={5.75} sx={sectionGeneral}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         H&W Stair & Rail is a site I voluntarily built for a new metalworking business.
@@ -128,17 +134,27 @@ function Resume() {
                         I have built this profile using React frontend library, JS, and Material UI - with alot of my own 
                         additions and tweeks to the predefined components.
                         <br />
-
                     </Typography>
                 </Grid>
             </Grid>
             {/* TOOLS COMPONENT - Centered full-width row cont */}
             <div style={iconBox}>
-                <Typography style={theme.typography.slantText}>Favorite Tools & Peripherals</Typography>
+                <Typography style={theme.typography.slantText}>Favorite Tools</Typography>
                 <div style={toolbox}>
                     <Tools which={'tools'} />
                 </div>
             </div>
+            <Grid container sx={gridCont}>
+                <Grid item xs={12} sx={sectionGeneral}>
+                    <Typography style={theme.typography.stressedOpaqueHeader}>About Me</Typography>
+                    <Typography sx={theme.typography.tinyFaded}>
+                        Drone building has been long-time hobby of mine. I source components, solder them together and 
+                        load firmware onto the flight control board. In order to fly, they usually need a bit of 
+                        tweaks to their parameters and then syncronization of their hardware components. Flight is fun 
+                        in first-person-view, though I'd rather build and program them. 
+                    </Typography>
+                </Grid>
+            </Grid>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import theme from '../../hooks/theme';
 import LilLogos from '../../components/LilLogos.js';
 
 
+// Namely 'featured' styles - used css grid in other stylesheet
 const fancyButtonStyle = {
 	backgroundColor: 'transparent',
 	color: '#FFBC28',
@@ -54,12 +55,12 @@ const featuredTitleBarStyle = {
 }
 const featuredGifContainerStyle = {
 	margin: '0 auto 20px',
+	transition: 'all ease-in-out 280ms',
 	'@media(max-width: 700px)': {
 		"&:hover": {
-			transform: 'scale(1.5)',
+			transform: 'scale(1.5) translate(-5%, 0)',
 			zIndex: 100,
-			transition: 'all ease-in-out 280ms',
-			boxShadow: '0px 2px 6px rgba(75, 75, 75, 0.527)'
+			boxShadow: '2px 6px 12px rgba(24, 24, 24, 0.934)'
 		}
 	}
 }
@@ -74,7 +75,7 @@ const MyCard = ({ ...props }) => {
 	return (
 		<>
 			{
-				// IF featured, featured render -> else is a standard cardStyle
+				// IF featured, featured cardStyle - else render standard cardStyle
 				props.spec
 				?
 				<div style={highlightCont}>
