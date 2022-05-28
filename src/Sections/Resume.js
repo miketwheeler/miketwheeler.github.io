@@ -3,6 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import Tools from '../components/Tools';
 import theme from '../hooks/theme';
 
+
 const surroundingContainer = { 
     flexGrow: 1, 
     padding: '40px 6% 100px',
@@ -15,7 +16,7 @@ const gridCont = {
     gap: 2,
 };
 const sectionTopLeft = { margin: '0 0 40px'};
-const sectionGeneral = { marginBottom: '40px' }
+const section = { marginBottom: '40px' }
 const miniCardCont = {
     padding: '18px 30px',
     marginBottom: '6px',
@@ -45,10 +46,10 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item xs={12} md={5} sx={sectionTopLeft}>
+                <Grid item xs={12} sm={10} md={5} sx={sectionTopLeft}>
                     <div style={miniCardCont}>
-                        <Typography sx={theme.typography.specialLargerText}>Skills</Typography>
-                        <Typography sx={theme.typography.tinyFaded}>
+                        <Typography sx={theme.typography.yellowTitle}>Skills</Typography>
+                        <Typography>
                             <ul style={theme.typography.listStyle}>
                                 <li>Javascript</li>
                                 <li>React.js</li>
@@ -61,8 +62,8 @@ function Resume() {
                         </Typography>
                     </div>
                     <div style={miniCardCont}>
-                        <Typography sx={theme.typography.specialLargerText}>Secondaries</Typography>
-                        <Typography sx={theme.typography.tinyFaded}>
+                        <Typography sx={theme.typography.yellowTitle}>Secondaries</Typography>
+                        <Typography>
                             <ul style={theme.typography.listStyle}>
                                 <li>Python & Django</li>
                                 <li>Relational DBs - SQL</li>
@@ -73,7 +74,7 @@ function Resume() {
                     </div>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item xs={12} md={5.75} sx={sectionGeneral}>
+                <Grid item xs={12} md={5.75} sx={section}>
                     <Typography sx={theme.typography.tinyFaded}>
                         Welcome to my Profile
                     </Typography>
@@ -110,7 +111,7 @@ function Resume() {
             {/* Second-mid grid section */}
             <Grid container sx={gridCont}>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item md={5.75} sx={sectionGeneral}>
+                <Grid item md={5.75} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         Being fairly well versed in javascript-based frontends, I continue to work toward learning 
@@ -124,7 +125,7 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item md={5.75} sx={sectionGeneral}>
+                <Grid item md={5.75} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         H&W Stair & Rail is a site I voluntarily built for a new metalworking business.
@@ -145,10 +146,10 @@ function Resume() {
                 </div>
             </div>
             <Grid container sx={gridCont}>
-                <Grid item xs={12} sx={sectionGeneral}>
+                <Grid item xs={12} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>About Me</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        Drone building has been long-time hobby of mine. I source components, solder them together and 
+                        Drone building has been a long-time hobby of mine. I source components, solder them together and 
                         load firmware onto the flight control board. In order to fly, they usually need a bit of 
                         tweaks to their parameters and then syncronization of their hardware components. Flight is fun 
                         in first-person-view, though I'd rather build and program them. 

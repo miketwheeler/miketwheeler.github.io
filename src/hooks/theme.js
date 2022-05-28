@@ -19,6 +19,12 @@ const theme = createTheme({
             padding: 0,
             margin: 0,
         },
+        yellowTitle: {
+            fontSize: '1.2rem',
+            color: '#FFBC28',
+            fontWeight: 600,
+            opacity: '90%'
+        },
         specialLargerText: {
             fontWeight: 500,
             fontSize: 26,
@@ -38,8 +44,10 @@ const theme = createTheme({
         },
         listStyle: {
             margin: 0,
+            // padding: 0,
             padding: '0 18px',
-            opacity: '40%',
+            opacity: '80%',
+            // listStyle: 'none',
         },
         bigTabPanelHeader: {
             fontSize: '56px', 
