@@ -29,7 +29,6 @@ const rightSide = {
 const emailContainer = {
     margin: '14px 0 0',
     height: '100%',
-    border: '1px dashed pink',
 }
 const emailImage = {
     minWidth: '100px',
