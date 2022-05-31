@@ -1,6 +1,5 @@
 import React from 'react'
 import { Typography } from '@mui/material';
-// import theme from '../../hooks/theme';
 
 
 const degreeCardContainer = {
