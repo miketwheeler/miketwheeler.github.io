@@ -94,17 +94,14 @@ function Resume() {
                     <div>
                         <br/>
                         <Typography sx={theme.typography.slantText}>
-                            I strive for a solution no matter the problem, I love coding.
+                            I strive for a solution no matter the problem and I love to code.
                         </Typography>
-                        <Typography sx={theme.typography.tinyFaded}> 
-                            <br />
-                            I welcome new programming languages, frameworks or libraries. 
-                            {/* <br />
-                            <br /> */}
-                            Others would describe me as intunitive, flexible, adaptive, investigative and reliable. 
-                            {/* <br />
-                            <br /> */}
-                            I believe work that can stand for itself <i>and</i> make a difference.                             
+                        <Typography sx={theme.typography.listStyle}> 
+                            <ul style={{padding: '0'}}>
+                                <li>I enjoy learning new programming languages, frameworks and libraries.</li> 
+                                <li>Others would describe me as intunitive, flexible, adaptive, investigative and reliable. </li>
+                                <li>I believe work that can stand for itself <i>and</i> make a difference.</li>
+                            </ul>                             
                         </Typography>
                     </div>
                 </Grid>
@@ -124,9 +121,9 @@ function Resume() {
                 <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        Being fairly well versed in javascript-based frontends, I continue to work toward learning 
-                        the entire stack. I've implemented backends in node.js and a couple instances using both
-                        the django REST framework and C#/.NET. 
+                        I am fairly well versed in javascript and working with JS-based frontends. I continue to work toward mastering
+                        the entire stack. I've implemented backends in Node.js and a couple instances using both
+                        the django REST framework and in C#/.NET. 
                         <br />
                         <br />
                         From my time with working on projects and apps, I've realized it's much easier to dream up a great app than
@@ -138,13 +135,13 @@ function Resume() {
                 <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        H&W Stair & Rail is a site I voluntarily built for a new metalworking business.
+                        H&W Stair & Rail is a site I voluntarily built for a small metalworking business.
                         This site is currently still an ongoing effort, but should be complete before too long.
                         <br />
                         <br />
-                        I have built this profile using React frontend library, JS, and Material UI - with alot of my own 
-                        additions and tweeks to the predefined components as well as many of my own. There are 3 APIs that I have 
-                        integrated into the app for functionality. 
+                        This profile is built in React using JS, HTML, CSS, and Material UI. The majority of the components 
+                        are custom built and some are predefined with a lot of tweeks to fit my needs. There are 3 APIs that I have 
+                        integrated into the app for functionality. I also implemented a serverless messaging solution.
                         <br />
                     </Typography>
                 </Grid>
@@ -158,7 +155,7 @@ function Resume() {
             </div>
             {/* <Grid container sx={gridCont}>
                 <Grid item xs={12} sx={section}>
-                    <Typography style={theme.typography.stressedOpaqueHeader}>Hobby</Typography>
+                    <Typography style={theme.typography.stressedOpaqueHeader}>Hobbies</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         Drone building has been a long-time hobby of mine. I source components, solder them together and 
                         load firmware onto the flight control board. In order to fly, they usually need a bit of 

@@ -7,7 +7,7 @@ const theme = createTheme({
             textTransform: 'none',
         },
         tinyFaded: {
-            opacity: '40%',
+            opacity: '60%',
             wordSpacing: '3px'
         },
         slantText: {
