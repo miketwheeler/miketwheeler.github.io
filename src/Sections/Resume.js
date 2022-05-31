@@ -20,7 +20,7 @@ const section = { marginBottom: '40px' };
 const specTitle = {
     fontSize: 34,
     fontWeight: 600,
-    marginTop: '12px',
+    // marginTop: '12px',
     color: '#FFBC28'
 }
 const miniCardCont = {
@@ -89,7 +89,7 @@ function Resume() {
                         Welcome to my Profile
                     </Typography>
                     <Typography sx={specTitle}>
-                        Hi, I'm Mike Wheeler
+                        I'm Mike Wheeler
                     </Typography>
                     <div>
                         <br/>
