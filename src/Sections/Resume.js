@@ -120,14 +120,16 @@ function Resume() {
                 <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        I am fairly well versed in javascript and working with JS-based frontends. I continue to work toward mastering
-                        the entire stack. I've implemented backends in Node.js and a couple instances using both
-                        the django REST framework and in C#/.NET. 
+                        I would like to develop on the backend more. I am fairly well versed in javascript and working 
+                        with JS-based frontends. I continue to work toward mastering the entire stack. Until now, I've 
+                        implemented small backends in Node.js and a couple of instances using both the django REST framework 
+                        and in C#/.NET. 
                         <br />
                         <br />
-                        From my time with working on projects and apps, I've realized it's much easier to dream up a great app than
-                        having the amount of time and knowledge to accomplish this alone. I would like to be a part of a team 
-                        to develop apps with a wider scope.
+                        Working on a larger app for the complexity and purpose challenges. From my time with working on 
+                        projects and apps, I've realized it's much easier to dream up a great app than
+                        having the amount of time and knowledge to accomplish this all alone. I would like to be a part of a 
+                        team to develop apps with a wider scope.
                     </Typography>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
