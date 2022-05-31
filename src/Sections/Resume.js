@@ -20,7 +20,6 @@ const section = { marginBottom: '40px' };
 const specTitle = {
     fontSize: 34,
     fontWeight: 600,
-    // marginTop: '12px',
     color: '#FFBC28'
 }
 const miniCardCont = {
@@ -153,17 +152,6 @@ function Resume() {
                     <Tools which={'tools'} />
                 </div>
             </div>
-            {/* <Grid container sx={gridCont}>
-                <Grid item xs={12} sx={section}>
-                    <Typography style={theme.typography.stressedOpaqueHeader}>Hobbies</Typography>
-                    <Typography sx={theme.typography.tinyFaded}>
-                        Drone building has been a long-time hobby of mine. I source components, solder them together and 
-                        load firmware onto the flight control board. In order to fly, they usually need a bit of 
-                        tweaks to their parameters and then syncronization of their hardware components. Flight is fun 
-                        in first-person-view, though I'd rather build and program them. 
-                    </Typography>
-                </Grid>
-            </Grid> */}
         </div>
     )
 }
