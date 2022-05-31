@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography } from '@mui/material';
-import theme from '../../hooks/theme'
+// import theme from '../../hooks/theme';
 
 
 const degreeCardContainer = {
@@ -19,13 +19,20 @@ const topRow = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
+    color: '#FFBC28',
+    fontWeight: 600,
+    marginBottom: '8px',
+    fontSize: "1.1rem",
+    opacity: '90%'
 }
 const location = {
     fontWeight: 'bolder',
     marginBottom: '10px',
+    opacity: '76%'
 }
-const dateComplete = {
-    paddingBottom: '8px',
+const blurbStyle = {
+    opacity: '40%',
+    wordSpacing: '3px'
 }
 
 
@@ -33,18 +40,18 @@ function DegreeCard({props}) {
     return (
         <div style={degreeCardContainer}>
             <div style={degreeTextSection}>
-                <div style={topRow}>
-                    <Typography sx={theme.typography.yellowHeader}>
-                        {props.source}
-                    </Typography>
-                    <Typography sx={dateComplete}>
+                <Typography style={topRow}>
+                    <div>
+                        {props.what}
+                    </div>
+                    <div>
                         {props.dateComplete}
-                    </Typography>
-                </div>
+                    </div>
+                </Typography>
                 <i style={location}>
-                    {props.location}
+                    {props.source}, {props.location}
                 </i>
-                <Typography sx={theme.typography.tinyFaded}>
+                <Typography sx={blurbStyle}>
                     {props.blurb}
                 </Typography>
             </div>

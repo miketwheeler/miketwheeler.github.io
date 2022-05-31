@@ -44,10 +44,8 @@ const theme = createTheme({
         },
         listStyle: {
             margin: 0,
-            // padding: 0,
             padding: '0 18px',
             opacity: '80%',
-            // listStyle: 'none',
         },
         bigTabPanelHeader: {
             fontSize: '56px', 

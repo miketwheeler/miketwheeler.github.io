@@ -15,8 +15,14 @@ const gridCont = {
     justifyContent: 'space-between',
     gap: 2,
 };
-const sectionTopLeft = { margin: '0 0 40px'};
-const section = { marginBottom: '40px' }
+const sectionTopLeft = { margin: '0 0 40px', width: '100%', justifyContent: 'center'};
+const section = { marginBottom: '40px' };
+const specTitle = {
+    fontSize: 34,
+    fontWeight: 600,
+    marginTop: '12px',
+    color: '#FFBC28'
+}
 const miniCardCont = {
     padding: '18px 30px',
     marginBottom: '6px',
@@ -46,9 +52,11 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item xs={12} sm={10} md={5} sx={sectionTopLeft}>
-                    <div style={miniCardCont}>
-                        <Typography sx={theme.typography.yellowTitle}>Skills</Typography>
+                <Grid container gap={1} xs={12} sm={5.5} sx={sectionTopLeft}>
+                    <Grid item xs={12} sx={miniCardCont}>
+                        <Typography sx={theme.typography.yellowTitle}>
+                            Skills
+                        </Typography>
                         <Typography>
                             <ul style={theme.typography.listStyle}>
                                 <li>Javascript</li>
@@ -60,9 +68,11 @@ function Resume() {
                                 <li>Agile / Kanban / Scrum</li>
                             </ul>
                         </Typography>
-                    </div>
-                    <div style={miniCardCont}>
-                        <Typography sx={theme.typography.yellowTitle}>Secondaries</Typography>
+                    </Grid>
+                    <Grid item xs={12} sx={miniCardCont}>
+                        <Typography sx={theme.typography.yellowTitle}>
+                            Secondaries
+                        </Typography>
                         <Typography>
                             <ul style={theme.typography.listStyle}>
                                 <li>Python & Django</li>
@@ -71,29 +81,29 @@ function Resume() {
                                 <li>Adobe Suite Apps</li>
                             </ul>
                         </Typography>
-                    </div>
+                    </Grid>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item xs={12} md={5.75} sx={section}>
+                <Grid item xs={12} sm={5.5} sx={section}>
                     <Typography sx={theme.typography.tinyFaded}>
                         Welcome to my Profile
                     </Typography>
-                    <Typography sx={theme.typography.stressedOpaqueHeader}>
+                    <Typography sx={specTitle}>
                         Hi, I'm Mike Wheeler
                     </Typography>
                     <div>
                         <br/>
                         <Typography sx={theme.typography.slantText}>
-                            I love to code, I strive for a solution no matter the problem, I'm motivated and contiuously improve
+                            I strive for a solution no matter the problem, I love coding.
                         </Typography>
                         <Typography sx={theme.typography.tinyFaded}> 
                             <br />
-                            I welcome new programming languages, frameworks or libraries
-                            <br />
-                            <br />
-                            Others would describe me as intunitive, flexible, adaptive, investigative and reliable
-                            <br />
-                            <br />
+                            I welcome new programming languages, frameworks or libraries. 
+                            {/* <br />
+                            <br /> */}
+                            Others would describe me as intunitive, flexible, adaptive, investigative and reliable. 
+                            {/* <br />
+                            <br /> */}
                             I believe work that can stand for itself <i>and</i> make a difference.                             
                         </Typography>
                     </div>
@@ -111,7 +121,7 @@ function Resume() {
             {/* Second-mid grid section */}
             <Grid container sx={gridCont}>
                 {/* Left section of 2 SBS row - xs size single col */}
-                <Grid item md={5.75} sx={section}>
+                <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         Being fairly well versed in javascript-based frontends, I continue to work toward learning 
@@ -125,7 +135,7 @@ function Resume() {
                     </Typography>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
-                <Grid item md={5.75} sx={section}>
+                <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         H&W Stair & Rail is a site I voluntarily built for a new metalworking business.
@@ -133,7 +143,8 @@ function Resume() {
                         <br />
                         <br />
                         I have built this profile using React frontend library, JS, and Material UI - with alot of my own 
-                        additions and tweeks to the predefined components.
+                        additions and tweeks to the predefined components as well as many of my own. There are 3 APIs that I have 
+                        integrated into the app for functionality. 
                         <br />
                     </Typography>
                 </Grid>
@@ -145,9 +156,9 @@ function Resume() {
                     <Tools which={'tools'} />
                 </div>
             </div>
-            <Grid container sx={gridCont}>
+            {/* <Grid container sx={gridCont}>
                 <Grid item xs={12} sx={section}>
-                    <Typography style={theme.typography.stressedOpaqueHeader}>About Me</Typography>
+                    <Typography style={theme.typography.stressedOpaqueHeader}>Hobby</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         Drone building has been a long-time hobby of mine. I source components, solder them together and 
                         load firmware onto the flight control board. In order to fly, they usually need a bit of 
@@ -155,7 +166,7 @@ function Resume() {
                         in first-person-view, though I'd rather build and program them. 
                     </Typography>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }

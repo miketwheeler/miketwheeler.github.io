@@ -51,7 +51,7 @@ const featuredTitleBarStyle = {
 	flexWrap: 'wrap',
 	display: 'flex',
 	justifyContent: 'space-between',
-	alignItems: 'flex-end'
+	alignItems: 'flex-end',
 }
 const featuredGifContainerStyle = {
 	margin: '0 auto 20px',
@@ -110,7 +110,7 @@ const MyCard = ({ ...props }) => {
 				// Standard project card render
 				<div className={MyCardStyle.main}>
 					<div className={MyCardStyle.textContent}>
-						<Typography	sx={theme.typography.yellowHeader}>
+						<Typography	sx={theme.typography.yellowTitle}>
 							{props.cardTitle}
 						</Typography>
 						<Typography noWrap={false} sx={tinyFadedText}>
