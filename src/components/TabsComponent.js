@@ -8,6 +8,7 @@ import theme from '../hooks/theme';
 import Footer from "./Footer";
 
 const tabHeight = 69; // individual height attr for the tab itself
+const altTabHeight = 30;
 const panelTop = 160; // top set to position tab-contents-panel below sticky appbar & tabs heights
 
 const StyledTabs = withStyles({
@@ -45,6 +46,9 @@ const IndivTabStyles = {
     "&:focus": {
         opacity: 1,
     },
+    '@media(max-height: 800px)': {
+        height: altTabHeight,
+    }
 }
 
 const useStyles = makeStyles((theme) => ({
