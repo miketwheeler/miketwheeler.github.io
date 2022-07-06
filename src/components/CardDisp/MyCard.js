@@ -12,7 +12,7 @@ import LilLogos from '../../components/LilLogos.js';
 const fancyButtonStyle = {
 	backgroundColor: 'transparent',
 	color: '#FFBC28',
-	border: '1px solid #FFBC28'
+	border: '1px solid #FFBC28',
 }
 const highlightCont = {
 	border: '1px solid #3b3b3b74',
@@ -95,14 +95,27 @@ const MyCard = ({ ...props }) => {
 						<Grid item xs={10} sx={{margin: '0 auto'}}>
 							{props.cardDescription}
 						</Grid>
-						<Grid item xs={10} sx={{margin: '40px auto 0'}}>
-							<div className={MyCardStyle.textButton}>
-								<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
-									<Typography>
-										See The Code
-									</Typography>
-								</Button>
-							</div>
+						<Grid container sx={{margin: '40px auto 10px'}}>
+						{/* sx={{margin: '40px auto 0'}} */}
+							<Grid item sx={{marginRight: '40px'}}>
+								<div className={MyCardStyle.textButton}>
+									<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
+										<Typography>
+											Visit The Site
+										</Typography>
+									</Button>
+								</div>
+							</Grid>
+							<Grid item>
+								<div className={MyCardStyle.textButton}>
+									<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
+										<Typography>
+											See The Code
+										</Typography>
+									</Button>
+								</div>
+							</Grid>
+							{/* <Grid item xs={8} sx */}
 						</Grid>
 					</Grid>
 				</div>

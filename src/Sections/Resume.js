@@ -129,7 +129,7 @@ function Resume() {
                         Working on a larger app for the complexity and purpose challenges. From my time with working on 
                         projects and apps, I've realized it's much easier to dream up a great app than
                         having the amount of time and knowledge to accomplish this all alone. I would like to be a part of a 
-                        team to develop apps with a wider scope.
+                        team to develop apps of a wider scope.
                     </Typography>
                 </Grid>
                 {/* Right section of 2 row - xs size single col */}
@@ -137,7 +137,7 @@ function Resume() {
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
                         H&W Stair & Rail is a site I voluntarily built for a small metalworking business.
-                        This site is currently still an ongoing effort, but should be complete before too long.
+                        This site is currently live and being upkept by myself on an as needed basis (Please see below for links).
                         <br />
                         <br />
                         This profile is built in React using JS, HTML, CSS, and Material UI. The majority of the components 
