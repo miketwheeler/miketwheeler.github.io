@@ -29,6 +29,7 @@ function CardDisp() {
 								cardTitle={item.cardTitle}
 								cardDescription={item.cardDescription}
 								linkTo={item.projectLink}
+								sitelink={item.sitelink}
 								logos={item.logoList}
 							/>
 							:
@@ -39,6 +40,7 @@ function CardDisp() {
 								cardTitle={item.cardTitle}
 								cardDescription={item.cardDescription}
 								linkTo={item.projectLink}
+								sitelink={item.sitelink}
 								logos={item.logoList}
 							/>
 						}

@@ -173,7 +173,7 @@ const data = {
             cardTitle: "H&W Stair and Rail",
             cardDescription: "Built in Next.js with React Router and Material UI components. This is a business information and contact site for small business. I integrated serverless functions to handle some of the data on the site. You can visit the live site by visiting the link below or going to hwstairandrail.com",
             projectLink: "https://github.com/miketwheeler/hwstairandrail",
-            sitelink: "https://www.hwstairandrail.com",
+            sitelink: "https://hwstairandrail.com",
             logoList: [ReactIcon, Js, Css, MuiIcon, Bs]
         },
         {
