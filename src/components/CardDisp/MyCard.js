@@ -96,7 +96,6 @@ const MyCard = ({ ...props }) => {
 							{props.cardDescription}
 						</Grid>
 						<Grid container sx={{margin: '40px auto 10px'}}>
-						{/* sx={{margin: '40px auto 0'}} */}
 							<Grid item sx={{marginRight: '40px'}}>
 								<div className={MyCardStyle.textButton}>
 									<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.sitelink)}>
@@ -115,7 +114,6 @@ const MyCard = ({ ...props }) => {
 									</Button>
 								</div>
 							</Grid>
-							{/* <Grid item xs={8} sx */}
 						</Grid>
 					</Grid>
 				</div>
