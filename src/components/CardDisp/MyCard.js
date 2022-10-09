@@ -13,6 +13,7 @@ const fancyButtonStyle = {
 	backgroundColor: 'transparent',
 	color: '#FFBC28',
 	border: '1px solid #FFBC28',
+	marginRight: '12px',
 }
 const highlightCont = {
 	border: '1px solid #3b3b3b74',
@@ -95,25 +96,17 @@ const MyCard = ({ ...props }) => {
 						<Grid item xs={10} sx={{margin: '0 auto'}}>
 							{props.cardDescription}
 						</Grid>
-						<Grid container sx={{margin: '40px auto 10px'}}>
-							<Grid item sx={{marginRight: '40px'}}>
-								<div className={MyCardStyle.textButton}>
-									<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.sitelink)}>
-										<Typography>
-											Visit The Site
-										</Typography>
-									</Button>
-								</div>
-							</Grid>
-							<Grid item>
-								<div className={MyCardStyle.textButton}>
-									<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
-										<Typography>
-											See The Code
-										</Typography>
-									</Button>
-								</div>
-							</Grid>
+						<Grid item xs={10} sx={{margin: '30px auto 10px', display: 'flex', flexDirection: 'row'}}>
+							<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.sitelink)}>
+								<Typography>
+									Visit Site
+								</Typography>
+							</Button>
+							<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
+								<Typography>
+									Code Repo
+								</Typography>
+							</Button>
 						</Grid>
 					</Grid>
 				</div>
@@ -131,7 +124,7 @@ const MyCard = ({ ...props }) => {
 					<div className={MyCardStyle.textButton}>
 						<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>
 							<Typography>
-								See The Code
+								Code Repo
 							</Typography>
 						</Button>
 						<div>

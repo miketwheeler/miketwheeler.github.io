@@ -5,6 +5,7 @@ import { Typography } from '@mui/material';
 const degreeCardContainer = {
     display: 'flex',
     padding: '18px',
+    paddingBottom: '30px',
     margin: '18px auto',
     borderBottom: '1px dotted #010101',
 }
@@ -20,19 +21,24 @@ const topRow = {
     flexWrap: 'wrap',
     color: '#FFBC28',
     fontWeight: 600,
-    marginBottom: '8px',
     fontSize: "1.1rem",
     opacity: '90%'
-}
-const location = {
-    fontWeight: 'bolder',
-    marginBottom: '10px',
-    opacity: '76%'
 }
 const blurbStyle = {
     opacity: '40%',
     wordSpacing: '3px'
 }
+const bottomRow = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    marginBottom: 4
+}
+const whiteHeader = {
+    paddingBottom: '0px',
+}
+
 
 
 function DegreeCard({props}) {
@@ -41,15 +47,20 @@ function DegreeCard({props}) {
             <div style={degreeTextSection}>
                 <Typography style={topRow}>
                     <div>
-                        {props.what}
+                        {props.source}
                     </div>
                     <div>
                         {props.dateComplete}
                     </div>
                 </Typography>
-                <i style={location}>
-                    {props.source}, {props.location}
-                </i>
+                <div style={bottomRow}>
+                    <Typography sx={whiteHeader}>
+                        {props.what}
+                    </Typography>
+                    <Typography sx={whiteHeader}>
+                        {props.location}
+                    </Typography>
+                </div>
                 <Typography sx={blurbStyle}>
                     {props.blurb}
                 </Typography>

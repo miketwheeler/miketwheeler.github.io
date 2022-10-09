@@ -171,7 +171,7 @@ const data = {
             gifId: "5362vGll2WQMOXVJDk",
             imageTitle: "h-and-w-stair-and-rail",
             cardTitle: "H&W Stair and Rail",
-            cardDescription: "Built in Next.js with React Router and Material UI components. This is a business information and contact site for small business. I integrated serverless functions to handle some of the data on the site. You can visit the live site by visiting the link below or going to hwstairandrail.com",
+            cardDescription: "Built in Next.js, Javascript, JSX, CSS modules, and with the addition React Router for a single page type application. Created custom components and used Material UI for it's styled components. I've integrated serverless functions and APIs for the data management of this site. Please visit the site below or go to hwstairandrail.com",
             projectLink: "https://github.com/miketwheeler/hwstairandrail",
             sitelink: "https://hwstairandrail.com",
             logoList: [ReactIcon, Js, Css, MuiIcon, Bs]
@@ -188,7 +188,7 @@ const data = {
             gifId: "akBn1xWokfYQZKrxHb",
             imageTitle: "react-js-with-django-backend",
             cardTitle: "Ecommerce Shopping App",
-            cardDescription: "This project pairs a React frontend and a Django Rest Framework backend. Also included an admin app for CRUD operations for products and account managment.",
+            cardDescription: "Created an ecommerce React application with REST API as a backend developed in the Django Rest Framework. Also included an admin app for CRUD operations for products and account managment.",
             projectLink: "https://github.com/miketwheeler/Django-React-Ecomerce",
             logoList: [ReactIcon, Py, Django, Css, Html],
 
@@ -197,7 +197,7 @@ const data = {
             gifId: "BmVjF9nkmsghyHCvcc",
             imageTitle: "meetups-clone-next-js ",
             cardTitle: "Meetups Clone",
-            cardDescription: "A Meetups-like app built in Next.js. Displays events that are searchable with an admin side for CRUD operations. Practice using Next.js's router with dynamic routes.",
+            cardDescription: "A Meetups clone built in Next.js with javascript, HTML, and CSS/Sass. Displays searchable events to attend with an admin side for CRUD operations. Set up with Next.js's router with dynamic routes.",
             projectLink: "https://github.com/miketwheeler/React-MeetupsApp",
             logoList: [Js, Css, Html],
         },
@@ -226,46 +226,53 @@ const data = {
     ],
     degreeCardData: {
         collegeDegree: {
-            what: "BS in Management Information Systems",
+            what: "Bachelor's of Science in Management Information Systems",
             source: "University of Nebraska at Omaha", 
             location: "Omaha, Nebraska", 
             dateComplete: "Graduated - 12/2019",
-            blurb: "Bachelors of Sciences in Management Information Systems. Completed many courses in software development, design, systems managment and project managment. Capstone project was the creation of a volunteer management system for the A.F.S.P. Omaha Chapter."
+            blurb: "I completed coursework in software development, programming, databasing, systems and project managment. My capstone project was the creation of a volunteer management system for the A.F.S.P. Omaha Chapter."
         },
         collegeCert: {
             what: "Certificate in Systems Development",
             source: "University of Nebraska at Omaha", 
             location: "Omaha, Nebraska", 
             dateComplete: "Awarded - 12/2019",
-            blurb: "Earned alongside my bachelors degree. Classes taken included project management, advanced database design and systems information architecture."
+            blurb: "I earned this certificate alongside my bachelors degree. Additional courses included windows server, advanced database management, and information architecture."
         },
-        onlineBlazor: {
+        blazorServerApplication: {
+            source: "Blazor Server Course",
+            what: "Certificate of Completion", 
+            location: "Virtual at Udemy",
+            dateComplete: "Achieved - 09/2022",
+            blurb: "Developed an inventory management system for a mock bicycle shop using Blazor server. Used the Clean architecture approach to centralize use-case driven development."
+        },
+        blazorWasmApplication: {
+            source: "Blazor WASM Course", 
             what: "Certificate of Completion",
-            source: "Blazor Apps & C#", 
             location: "Virtual at Udemy", 
-            dateComplete: "Awarded - 02/2021",
+            dateComplete: "Achieved - 07/2022",
             blurb: "A course on developing apps with Microsoft's Blazor in C# and .NET. This included model-view-controller schema, creation of front and backend, data management, and deployment."
         },
         onlineReact: {
+            source: "Django REST Framework with React.js Course", 
             what: "Certificate of Completion",
-            source: "Django Framework & React.js", 
             location: "Virtual at Udemy", 
-            dateComplete: "Awarded - 10/2020",
+            dateComplete: "Achieved - 10/2020",
             blurb: "Developed an ecommerce application using React for the frontend and Django's REST Framework with Python for the backend. Included admin accounts for CRUD operations on products."
         },
         fullstackNucamp: {
-            what: "Certificate in Fullstack Web Development",
-            source: "Nucamp Fullstack Bootcamp", 
+            source: "Nucamp Coding Bootcamp", 
+            what: "Certificate in Full Stack Web Development",
             location: "Redmond, Washington",
             dateComplete: "Graduated - 04/2022",
-            blurb: "Fullstack coding Bootcamp. Course content included Javascript, Bootstrap, React, React Native, setting up Node.js and MongoDB backends, and deployment."
+            blurb: "Created a dynamic web application using React.js, React Native, MongoDB, Redux, CSS, Bootstrap, assembling a server in Express & node.js, and finishing with a cloud deployment."
         },
         frontendNucamp: {
-            what: "Certificate in Frontend Web Development",
-            source: "Nucamp Frontend Bootcamp", 
+            source: "Nucamp Coding Bootcamp", 
+            what: "Certificate in Front End Development",
             location: "Redmond, Washington",
             dateComplete: "Graduated - 01/2022",
-            blurb: "In-depth HTML5, CSS3, Bootstrap and Javascript with introductions to React"
+            blurb: "In-depth HTML5, CSS3, Bootstrap and Javascript with introductions to React. Created a simple stateless website to learn the front end."
         },
     }
 };

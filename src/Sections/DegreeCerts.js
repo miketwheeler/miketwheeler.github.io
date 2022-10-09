@@ -82,7 +82,8 @@ function DegreeCerts() {
 						</h3>
 						<DegreeCard props={data.degreeCardData.fullstackNucamp} />
 						<DegreeCard props={data.degreeCardData.frontendNucamp} />
-						<DegreeCard props={data.degreeCardData.onlineBlazor} />
+						<DegreeCard props={data.degreeCardData.blazorServerApplication} />
+						<DegreeCard props={data.degreeCardData.blazorWasmApplication} />
 						<DegreeCard props={data.degreeCardData.onlineReact} />
 					</div>
 				</div>

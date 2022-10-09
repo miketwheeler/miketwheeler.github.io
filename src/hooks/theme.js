@@ -34,7 +34,7 @@ const theme = createTheme({
         },
         h3style: {
             color: '#FFBC28', 
-            fontWeight: 100, 
+            // fontWeight: 20, 
             whiteSpace: 'nowrap'
         },
         stressedOpaqueHeader: {

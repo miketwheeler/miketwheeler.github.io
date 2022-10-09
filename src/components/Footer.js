@@ -29,10 +29,12 @@ const rightSide = {
 const emailContainer = {
     margin: '14px 0 0',
     height: '100%',
+    border: '1px dashed pink',
+    
 }
 const emailImage = {
-    minWidth: '100px',
-    maxWidth: '310px',
+    // minWidth: '50px',
+    maxWidth: '280px',
     margin: 0,
     '@media(max-width: 600px)': {
         margin: '0 auto'
@@ -49,10 +51,10 @@ function Footer() {
                     <Grid item xs={12} sm={6}>
                         <Box sx={leftSide}>
                             <div style={{marginBottom: '40px'}}>
-                                <Typography sx={{fontSize: '32px'}}>I'm ready to bring some magic to the team.</Typography>
+                                <Typography sx={{fontSize: '32px'}}>Thank you for visiting my profile today!</Typography>
                             </div>
                             <div style={{fontSize: '30px', color: '#FFBC28'}}>
-                                Feel free to reach out, I'm always on
+                            Feel free to reach out, I'm always on and ready to contribute
                             </div>
                         </Box>
                     </Grid>
@@ -64,7 +66,7 @@ function Footer() {
                                 <Typography sx={{fontSize: '1.1rem', opacity: '55%'}}>Redmond, Washington</Typography>
                                 {/* <Typography sx={{fontSize: '1.3rem'}}>mikeytwheeler@gmail.com</Typography> */}
                                 <div style={emailContainer}>
-                                    <img alt="email-address" aria-label="email-picture"src={emailGraphic} style={emailImage} />
+                                    <img alt="email-address" aria-label="email-picture" src={emailGraphic} style={emailImage} />
                                 </div>
                             </div>
                         </Box>

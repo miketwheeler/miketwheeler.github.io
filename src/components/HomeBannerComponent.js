@@ -8,11 +8,12 @@ import theme from '../hooks/theme';
 // grid - splits top area into roughly 2 halves
 const container = {
     '@media(max-width: 500px)':{
-        marginBottom: 0,
+        // marginBottom: 0,
+        margin: 'auto',
         paddingLeft: '0%',
         textAlign: 'center',
         paddingTop: '122px',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     display: "flex", 
     flexGrow: 1,
@@ -21,6 +22,7 @@ const container = {
     paddingLeft: '13%',
     marginBottom: '-44px',
     backgroundColor: '#2b2b2b',
+    // minWidth: '255px'
 }
 const leftUpperItem = { 
     '@media(max-width: 500px)':{
@@ -44,7 +46,6 @@ const statsContainer = {
         width: '100%',
     },
     display: 'flex', 
-    color: 'white',
     maxWidth: '300px',
     height: 'fit-content',
     margin: 'auto auto',
@@ -84,7 +85,7 @@ function useWindowX() {
         mql.addEventListener("change", handleResize);
 
         return () => { mql.removeEventListener("change", handleResize) }
-    }, [])
+    }, [mql])
 
     return watchX;
 }

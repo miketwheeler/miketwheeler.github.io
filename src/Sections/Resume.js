@@ -58,13 +58,15 @@ function Resume() {
                         </Typography>
                         <Typography>
                             <ul style={theme.typography.listStyle}>
-                                <li>Javascript</li>
-                                <li>React.js</li>
-                                <li>API Integration</li>
-                                <li>Reusable Components</li>
+                            <li>Javascript</li>
+                                <li>React</li>
+                                <li>REST API Integration</li>
+                                <li>Reusable & Custom Components</li>
                                 <li>Material UI & Bootstrap</li>
                                 <li>HTML & CSS</li>
+                                <li>Project Management and Development</li>
                                 <li>Agile / Kanban / Scrum</li>
+                                <li>Python</li>
                             </ul>
                         </Typography>
                     </Grid>
@@ -74,10 +76,13 @@ function Resume() {
                         </Typography>
                         <Typography>
                             <ul style={theme.typography.listStyle}>
-                                <li>Python & Django</li>
-                                <li>Relational DBs - SQL</li>
-                                <li>MongoDB & Firebase - NoSQL</li>
-                                <li>Adobe Suite Apps</li>
+                            <li>C# and ASP.NET</li>
+                                <li>Blazor Server & WASM</li>
+                                <li>Django & Django REST Framework</li>
+                                <li>Relational Databases</li>
+                                <li>MongoDB & Firebase Databases</li>
+                                <li>Cloud Deployment</li>
+                                <li>Adobe Suite of Apps</li>
                             </ul>
                         </Typography>
                     </Grid>
@@ -88,19 +93,22 @@ function Resume() {
                         Welcome to my Profile
                     </Typography>
                     <Typography sx={specTitle}>
-                        I'm Mike Wheeler
+                        Hello, I'm Mike Wheeler
                     </Typography>
                     <div>
                         <br/>
                         <Typography sx={theme.typography.slantText}>
-                            I strive for a solution no matter the problem and I love to code.
+                            I code all day every day. Solving problems of all types is what I enjoy doing, it motivates me. I make an effort to learn something new every day.
                         </Typography>
-                        <Typography sx={theme.typography.listStyle}> 
-                            <ul style={{padding: '0'}}>
-                                <li>I enjoy learning new programming languages, frameworks and libraries.</li> 
-                                <li>Others would describe me as intunitive, flexible, adaptive, investigative and reliable. </li>
-                                <li>I believe work that can stand for itself <i>and</i> make a difference.</li>
-                            </ul>                             
+                        <Typography sx={theme.typography.tinyFaded}> 
+                            <br /> 
+                            <br />
+                            During the pursuit of my Management Information Systems degree I was exposed to high level project management, programming courses, 
+                            in-depth databasing and server courses, and participated in many large projects that made a difference in my community.
+                            <br />
+                            <br />
+                            Since graduating I have continued to take online courses and attended a bootcamp to further my knowledge in web development. I have successfully 
+                            developed and deployed a website for a small company, created this site, and am currently working on a social site for connecting developers such as myself.                             
                         </Typography>
                     </div>
                 </Grid>
@@ -120,10 +128,9 @@ function Resume() {
                 <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Goals</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        I would like to develop on the backend more. I am fairly well versed in javascript and working 
-                        with JS-based frontends. I continue to work toward mastering the entire stack. Until now, I've 
-                        implemented small backends in Node.js and a couple of instances using both the django REST framework 
-                        and in C#/.NET. 
+                        Being fairly well versed in javascript-based frontends, I continue to work toward learning 
+                        the entire stack. I've implemented backends in node.js and a couple instances using both
+                        the django REST framework and C#/.NET. 
                         <br />
                         <br />
                         Working on a larger app for the complexity and purpose challenges. From my time with working on 
@@ -136,13 +143,19 @@ function Resume() {
                 <Grid item md={5.5} sx={section}>
                     <Typography style={theme.typography.stressedOpaqueHeader}>Recent Work</Typography>
                     <Typography sx={theme.typography.tinyFaded}>
-                        H&W Stair & Rail is a site I voluntarily built for a small metalworking business.
-                        This site is currently live and being upkept by myself on an as needed basis (Please see below for links).
+                        H&W Stair & Rail is a small metalworking company I had the pleasure of building the site for.
+                        A few constraints they exhibited were to implement this within their smaller budget. I worked through and 
+                        delivered a solution that would have near-zero overhead; for a small and local company it will suit their needs 
+                        for some time to come. Visitors are able to read up on the business' services and contact them for quotes on any 
+                        job inquiries they had. It also allows them to showcase projects they have completed. 
                         <br />
                         <br />
-                        This profile is built in React using JS, HTML, CSS, and Material UI. The majority of the components 
+                        This site is currently live and being maintained on an as needed basis (Please see below for links).
+                        <br />
+                        <br />
+                        This profile is built in React using Javascript, HTML, CSS, and Material UI. The majority of the components 
                         are custom built and some are predefined with a lot of tweeks to fit my needs. There are 3 APIs that I have 
-                        integrated into the app for functionality. I also implemented a serverless messaging solution.
+                        integrated into the app for functionality, this includes a serverless messaging solution.
                         <br />
                     </Typography>
                 </Grid>
@@ -154,6 +167,23 @@ function Resume() {
                     <Tools which={'tools'} />
                 </div>
             </div>
+            <Grid container sx={gridCont}>
+                <Grid item xs={12} sx={section}>
+                    <Typography style={theme.typography.stressedOpaqueHeader}>About Me</Typography>
+                    <Typography sx={theme.typography.tinyFaded}>
+                        I strongly believe in fairness and equality for all!
+                        <br/>
+                        <br/>
+                        Former employers have described me as intunitive, flexible, adaptive, investigative and a reliable member of their team.
+                        <br/>
+                        <br/>
+                        Hobbies include repairing electronics, drone building and playing guitar when I have the time. 
+                        I source components, solder them together and load firmware onto the flight control board. I tune the PID loop, 
+                        set other parameters and sync up the associated hardware components. I enjoy flying them, but I'd rather build 
+                        and program them. 
+                    </Typography>
+                </Grid>
+            </Grid>
         </div>
     )
 }

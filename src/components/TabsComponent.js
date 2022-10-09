@@ -12,6 +12,7 @@ const altTabHeight = 30;
 const panelTop = 160; // top set to position tab-contents-panel below sticky appbar & tabs heights
 
 const StyledTabs = withStyles({
+    // minWidth: '360px',
     indicator: {
         display: "flex",
         justifyContent: "center",
@@ -26,7 +27,7 @@ const StyledTabs = withStyles({
         <Tabs 
             {...props} 
             TabIndicatorProps={{ children: <div /> }} 
-            variant="fullWidth" 
+            variant="fullWidth"
             sx={{ 
                 backgroundColor: '#2b2b2b', 
                 width: '100%', 
@@ -55,12 +56,13 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    indicator: {
+    indicatorStyles: {
         padding: theme.spacing(0),
     },
-    demo2: {
+    tabNavStyles: {
         backgroundColor: "#2b2b2b",
         position: "sticky",
+        minWidth: '315px',
         top: 110,
         left: 0,
         right: 0,
@@ -70,8 +72,9 @@ const useStyles = makeStyles((theme) => ({
             top: 150,
         }
     },
-    tabPanel: {
-        zIndex: 100
+    tabPanelStyles: {
+        zIndex: 100,
+        minWidth: '315px',
     }
 }));
 
@@ -196,9 +199,10 @@ function TabsComponent(props) {
 
     const classes = useStyles();
 
+    // the nav, body, and footer of the document
     return (
         <div>
-            <nav className={classes.demo2}>
+            <nav className={classes.tabNavStyles}>
                 <StyledTabs value={activeState ? activeState : itemsServer[0].hash}>
                     {itemsServer.map((item2) => (
                         <Tab
@@ -210,10 +214,10 @@ function TabsComponent(props) {
                         />
                     ))}
                 </StyledTabs>
-                <div className={classes.indicator} />
+                <div className={classes.indicatorStyles} />
             </nav>
 
-            <div className={classes.tabPanel}>
+            <div className={classes.tabPanelStyles}>
                 {
                     itemsServer.map((item1) => (
                         <article id={item1.hash} key={item1.text}>
@@ -222,7 +226,9 @@ function TabsComponent(props) {
                     ))
                 }
             </div>
+
             <Footer />
+
         </div>
     );
 }
