@@ -41,6 +41,7 @@ async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, se
 
     try {
         const response = await axios.request(config);
+        alert("Your message has been sent and I would like to thank you for reaching out! I will get back to you as soon as possible.")
         console.log("response data & status: ", response.data);
     }
     catch( error ) {
