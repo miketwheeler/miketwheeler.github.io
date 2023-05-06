@@ -44,7 +44,7 @@ async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, se
         console.log("response data & status: ", response.data);
     }
     catch( error ) {
-        alert("There was an error sending your message. Please try again later or waiting a minute to re-submit).")
+        alert("There was an error sending your message. Please try again later or waiting a minute to re-submit. Thank you.");
         console.log("response ERROR returned: ", error.data);
     }
 }
