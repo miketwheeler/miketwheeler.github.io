@@ -171,9 +171,9 @@ const data = {
             gifId: "5362vGll2WQMOXVJDk",
             imageTitle: "h-and-w-stair-and-rail",
             cardTitle: "H&W Stair and Rail",
-            cardDescription: "Built in Next.js, Javascript, JSX, CSS modules, and with the addition React Router for a single page type application. Created custom components and used Material UI for it's styled components. I've integrated serverless functions and APIs for the data management of this site. Please visit the site below or go to hwstairandrail.com",
+            cardDescription: "Built in Next.js, Javascript, JSX, CSS modules, and with the addition React Router for a single page type application. Created custom components and used Material UI for it's styled components. I've integrated serverless functions and APIs for the data management of this site. The site is no longer deployed at hwstairandrail.com due to some updates, you can see the demo site at https://hwstairandrail.netlify.app ",
             projectLink: "https://github.com/miketwheeler/hwstairandrail",
-            sitelink: "https://hwstairandrail.com",
+            sitelink: "https://hwstairandrail.netlify.app",
             logoList: [ReactIcon, Js, Css, MuiIcon, Bs]
         },
         {

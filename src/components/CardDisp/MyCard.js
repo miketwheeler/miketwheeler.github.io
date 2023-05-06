@@ -99,7 +99,7 @@ const MyCard = ({ ...props }) => {
 						<Grid item xs={10} sx={{margin: '30px auto 10px', display: 'flex', flexDirection: 'row'}}>
 							<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.sitelink)}>
 								<Typography>
-									Visit Site
+									App Demo
 								</Typography>
 							</Button>
 							<Button sx={fancyButtonStyle} onClick={() => buttonAction(props.linkTo)}>

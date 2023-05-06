@@ -2,51 +2,50 @@
 require('dotenv').config();
 
 const axios = require('axios');
-const kburl = process.env.REACT_APP_KOR_BASEURL;
+const kcurl = process.env.REACT_APP_KOR_BASEURL;
 const templateId = process.env.REACT_APP_TEMPLATEID;
 
 
 async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, senderPermission, senderMessage) {
-    const assembledData = JSON.stringify({
-        "from":{
-            "email": process.env.REACT_APP_SG_SENDTO
+    const assembledData = {
+        "from": {
+            "email": process.env.REACT_APP_SG_SENTFROM,
+            "name": "Portfolio Site"
         },
         "personalizations": [{
-            "to": [{ 
-                "email": process.env.REACT_APP_SG_SENDTO 
-            }],
+            "to": [{ "email": process.env.REACT_APP_SG_SENDTO }],
             "dynamic_template_data": {
                 "sentName": senderName,
                 "sentTitle": senderTitle,
                 "sentPhoneNum": senderPhone,
                 "sentEmail": senderEmail,
                 "sentPermissionUse": senderPermission,
-                "sentMessage": senderMessage,
-            }
+                "sentMessage": senderMessage
+            },
+            "subject": "New Message from Portfolio Site",
         }],
+        
         "template_id": templateId
-    });
+    };
 
     const config = {
         method: 'post',
-        url: kburl,
+        url: kcurl,
         headers: {
             'x-api-key': process.env.REACT_APP_SG_PUBLIC_KEY, 
             'template_id': templateId, 
-            'Content-Type': 'application/json'
+            'content-type': 'application/json'
         },
         data: assembledData
     };
 
-    axios(config)
-        .then(function(res) {
-            alert("Thank you for reaching out! I'll get back with you as soon as I can");
-            console.log("response data status: ", res.status);
-        })
-        .catch(function(err) {
-            alert("Hmm, something went wrong there. Please try again");
-            console.log("response ERROR, BE returned: ", err.response.data);
-        })
+    try {
+        const response = await axios.request(config);
+        console.log("response data & status: ", response.data)
+    }
+    catch( error ) {
+        console.log("response ERROR returned: ", error.response.data)
+    }
 }
 
 export default sGSendEmail;

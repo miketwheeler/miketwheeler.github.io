@@ -8,6 +8,12 @@ import ToTop from './components/ToTop';
 import TabsNavigation from './components/TabsNavigation';
 
 
+// THIS IS THE GH-PAGES DEPLOYED VERSION (steps as in package.json)
+// 		- last deploy: 10/08/2022 @ ~10pm 
+// 1) push to gh
+// 2) npm run build
+// 3) npm run deploy 
+
 function App() {
 	const [showButton, setShowButton] = useState(false);
 
