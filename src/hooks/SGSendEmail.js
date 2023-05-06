@@ -41,10 +41,11 @@ async function sGSendEmail(senderName, senderTitle, senderPhone, senderEmail, se
 
     try {
         const response = await axios.request(config);
-        console.log("response data & status: ", response.data)
+        console.log("response data & status: ", response.data);
     }
     catch( error ) {
-        console.log("response ERROR returned: ", error.response.data)
+        alert("There was an error sending your message. Please try again later or waiting a minute to re-submit).")
+        console.log("response ERROR returned: ", error.data);
     }
 }
 
