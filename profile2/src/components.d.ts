@@ -9,13 +9,21 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppBar: typeof import('./components/AppBar.vue')['default']
+    AppbarProfileBubble: typeof import('./components/inserts/hero/AppbarProfileBubble.vue')['default']
     AppFooter: typeof import('./components/AppFooter.vue')['default']
     AppTabs: typeof import('./components/AppTabs.vue')['default']
+    CredentialCard: typeof import('./components/inserts/CredentialCard.vue')['default']
     CredentialsSection: typeof import('./components/pageSections/CredentialsSection.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    HeroLeft: typeof import('./components/inserts/hero/HeroLeft.vue')['default']
+    HeroRight: typeof import('./components/inserts/hero/HeroRight.vue')['default']
     IntroductionSection: typeof import('./components/pageSections/IntroductionSection.vue')['default']
+    LogoBar: typeof import('./components/inserts/LogoBar.vue')['default']
+    ProjectCard: typeof import('./components/inserts/ProjectCard.vue')['default']
     ProjectsSection: typeof import('./components/pageSections/ProjectsSection.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Tools: typeof import('./components/pageSections/ToolsSection.vue')['default']
+    ToolsSection: typeof import('./components/pageSections/ToolsSection.vue')['default']
   }
 }

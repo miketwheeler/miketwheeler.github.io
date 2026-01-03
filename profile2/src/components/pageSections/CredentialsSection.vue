@@ -1,30 +1,26 @@
 <template>
-    <v-container>
-        <v-card minHeight="900">
-            <v-card-title>Credentials</v-card-title>
-            <v-grid>
-                <v-row style="height: 500px;">
-                    <v-col cols="12" sm="6" height="400">
-                        <v-sheet color="surface-variant-alt" height="96" style="border: 1px solid pink;">
-
-                        </v-sheet>
-                    </v-col>
-                    <v-col cols="12" sm="6" height="400">
-                        <v-sheet color="surface-variant-alt" height="96" style="border: 1px solid green;">
-
-                        </v-sheet>
-                    </v-col>
-                </v-row>
-            </v-grid>
-        </v-card>
+    <v-container id="credentials">
+        <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Credentials</div>
+        <v-row>
+            <v-col>
+                <div class="text-h6 text-primary ml-2 mb-2">Accredited</div>
+                <CredentialCard :educationCategory="'accredited'" />
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col>
+                <div class="text-h6 text-primary ml-2 mb-2">Extracurricular</div>
+                <CredentialCard :educationCategory="'extracurricular'" />
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 
 
 <script lang="ts" setup>
+import CredentialCard from '../inserts/CredentialCard.vue';
 
 </script>
 
 
-<style scoped>
-</style>
+<style scoped></style>
