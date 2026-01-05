@@ -10,7 +10,7 @@
                                 Libraries</v-card-title>
                             <v-card-text color="surface-variant-alt" min-height="12px" class="pa-4">
                                 <div class="d-flex flex-wrap align-center justify-center">
-                                    <a v-for="lang in data.langsList" :key="lang.key" :href="lang.link" target="_blank"
+                                    <a v-for="lang in langsList" :key="lang.key" :href="lang.link" target="_blank"
                                         rel="noreferrer">
                                         <img style="width: 60px; margin: auto 5px;" :src="lang.searchIcon"
                                             :alt="lang.altName" class="ma-4" />
@@ -30,7 +30,7 @@
                             <v-card-text color="surface-variant-alt" min-height="12px" class="pa-4">
                                 <div class="d-flex flex-wrap align-center justify-center">
                                     <!-- for each language and library, icon and link -->
-                                    <a v-for="tool in data.toolsList" :key="tool.key" :href="tool.link" target="_blank"
+                                    <a v-for="tool in toolsList" :key="tool.key" :href="tool.link" target="_blank"
                                         rel="noreferrer">
                                         <img style="width: 60px; margin: auto 5px;" :src="tool.searchIcon"
                                             :alt="tool.altName" class="ma-4" />
@@ -47,7 +47,7 @@
 
 
 <script lang="ts" setup>
-import data from '@/data/data';
+import { toolsList, langsList } from '@/data/data';
 import { cardBackground } from '@/globals/globals';
 
 

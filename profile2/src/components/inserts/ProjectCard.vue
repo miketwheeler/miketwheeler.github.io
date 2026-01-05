@@ -9,7 +9,7 @@
                     {{ project.cardTitle }}
                 </div>
                 <div class="align-center d-flex">
-                    <LogoBar :logoList="project.logoList" />
+                    <LogoBar v-if="project.logoList" :logoList="project.logoList" />
                 </div>
             </div>
             <div class="d-flex flex-column w-100 card-description text-grey">
@@ -106,26 +106,35 @@
 
 <script lang="ts" setup>
 import LogoBar from './LogoBar.vue';
+import { type Logo, type Project } from '@/data/data';
 
+// export interface Logo {
+//     key: number;
+//     title: string | null;
+//     link: string | null;
+//     linkedImgSource: string | null;
+//     altName: string | null;
+//     searchIcon: any;
+// }
 
-interface Project {
-    id: string | null;
-    featured: boolean | null;
-    private: boolean | null;
-    gifId: string | null;
-    youtubeLink: string | null;
-    imageTitle: string | null;
-    subtitle: string | null;
-    cardTitle: string | null;
-    cardDescription: string | null;
-    projectLink: string | null;
-    siteLink: string | null;
-    logoList: string[] | null;
-}
+// interface Project {
+//     id: string | null;
+//     featured: boolean | null;
+//     private: boolean | null;
+//     gifId: string | null;
+//     youtubeLink: string | null;
+//     imageTitle: string | null;
+//     subtitle: string | null;
+//     cardTitle: string | null;
+//     cardDescription: string | null;
+//     projectLink: string | null;
+//     siteLink: string | null;
+//     logoList: Logo[] | null;
+// }
 
 const props = defineProps({
     project: {
-        type: Object as () => Project | null,
+        type: Object as () => Project,
         required: true
     }
 })

@@ -13,27 +13,12 @@
 
 
 <script lang="ts" setup>
+import { computed } from 'vue';
 import ProjectCard from '@/components/inserts/ProjectCard.vue';
-import data from '@/data/data';
+import { projectCardList, type Project } from '@/data/data';
 
-interface Project {
-    id: string | null;
-    featured: boolean | null;
-    private: boolean | null;
-    gifId: string | null;
-    youtubeLink: string | null;
-    imageTitle: string | null;
-    subtitle: string | null;
-    cardTitle: string | null;
-    cardDescription: string | null;
-    projectLink: string | null;
-    siteLink: string | null;
-    logoList: string[] | null;
-}
 
-const projects = computed<Array<Project>>(() => {
-    return data.projectCardList as Array<Project>
-})
+const projects = computed(() => projectCardList)
 </script>
 
 

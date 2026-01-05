@@ -29,7 +29,7 @@ const items = [
   {
     title: 'GitHub',
     icon: 'mdi-github',
-    href: 'https://github.com/michaelwheeler',
+    href: 'https://github.com/miketwheeler',
   },
   {
     title: 'LinkedIn',

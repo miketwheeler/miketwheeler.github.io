@@ -10,14 +10,16 @@
 
                 <div class="hero-actions">
                     <v-btn class="hero-btn mr-2" rounded="xl" :density="smAndUp ? 'default' : 'comfortable'"
-                        variant="tonal" :icon="!smAndUp"
-                        :style="smAndUp ? 'transition-delay: 0.2s;' : 'transition-delay: 0s;'">
+                        variant="tonal" :icon="!smAndUp" href="https://github.com/miketwheeler" target="_blank"
+                        :style="smAndUp ? 'transition-delay: 0.2s;' : 'transition-delay: 0s;'"
+                        v-tooltip="'Visit my GitHub'">
                         <v-icon icon="mdi-github" class="hero-btn-icon" />
                         <span class="hero-btn-label">GitHub</span>
                     </v-btn>
 
                     <v-btn class="hero-btn" rounded="xl" :density="smAndUp ? 'default' : 'comfortable'" variant="tonal"
-                        :icon="!smAndUp" :style="smAndUp ? 'transition-delay: 0.2s;' : 'transition-delay: 0s;'">
+                        :icon="!smAndUp" :style="smAndUp ? 'transition-delay: 0.2s;' : 'transition-delay: 0s;'"
+                        v-tooltip="'Visit my LinkedIn'" href="https://linkedin.com/in/michaeltwheeler" target="_blank">
                         <v-icon icon="mdi-linkedin" class="hero-btn-icon" />
                         <span class="hero-btn-label">LinkedIn</span>
                     </v-btn>

@@ -55,16 +55,16 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import data from '@/data/data';
+import { degreeCardData, type DegreeCard } from '@/data/data';
 import { cardBackground } from '@/globals/globals';
 
-interface Education {
-    source: string | null;
-    dateComplete: string | null;
-    what: string | null;
-    location: string | null;
-    blurb: string | null;
-}
+// interface Education {
+//     source: string | null;
+//     dateComplete: string | null;
+//     what: string | null;
+//     location: string | null;
+//     blurb: string | null;
+// }
 
 const props = defineProps({
     educationCategory: {
@@ -73,8 +73,8 @@ const props = defineProps({
     }
 })
 
-const education = computed<Array<Education>>(() => {
-    return data.degreeCardData[props.educationCategory as keyof typeof data.degreeCardData] as Array<Education>
+const education = computed<Array<DegreeCard>>(() => {
+    return degreeCardData[props.educationCategory as keyof typeof degreeCardData] as Array<DegreeCard>
 })
 
 </script>
