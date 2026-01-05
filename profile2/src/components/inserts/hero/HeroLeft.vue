@@ -5,10 +5,10 @@
                 Full Stack Developer
             </v-card-title>
             <v-card-subtitle class="text-h5">
-                Jack of All Trades
+                [Jack of All Trades]
             </v-card-subtitle>
             <v-card-text class="text-h5">
-                <p>Hero Left</p>
+                <p>Software engineer. Problem solver. Lifelong learner.</p>
             </v-card-text>
         </v-card>
     </div>

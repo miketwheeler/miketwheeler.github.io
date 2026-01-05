@@ -11,7 +11,7 @@
 <style scoped>
 .hero-image {
     position: absolute;
-    /* bottom: -38px; */
+    bottom: -38px;
     border-radius: 999px;
     overflow: hidden;
     z-index: 2;

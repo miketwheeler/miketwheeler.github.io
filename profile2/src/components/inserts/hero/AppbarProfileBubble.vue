@@ -31,7 +31,6 @@ const profileBubbleSize = 50;
 
 .hero-image {
     position: absolute;
-    // bottom: -68px;
     border-radius: 999px;
     overflow: hidden;
     z-index: 2;
