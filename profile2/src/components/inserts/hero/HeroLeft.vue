@@ -29,7 +29,6 @@
     justify-content: end;
     width: 100%;
     max-width: fit-content;
-    /* vertical centering */
 }
 
 .adtl-card-styles {

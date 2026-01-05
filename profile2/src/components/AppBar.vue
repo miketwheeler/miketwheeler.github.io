@@ -44,7 +44,6 @@ const { smAndUp } = useDisplay()
 .sticky-appbar {
     position: sticky;
     top: 0;
-    /* match your app-bar */
     z-index: 1000;
 }
 

@@ -17,7 +17,7 @@
             slider-transition="fade">
             <v-tab @click="scrollTo('intro', 0)" style="text-transform: none;">Introduction</v-tab>
             <v-tab @click="scrollTo('tools', 1)" style="text-transform: none;">Tools</v-tab>
-            <v-tab @click="scrollTo('projects', 2)" style="text-transform: none;">Projects</v-tab>
+            <v-tab @click="scrollTo('projects', 2)" style="text-transform: none;">Projects & Experience</v-tab>
             <v-tab @click="scrollTo('credentials', 3)" style="text-transform: none;">Credentials</v-tab>
         </v-tabs>
 

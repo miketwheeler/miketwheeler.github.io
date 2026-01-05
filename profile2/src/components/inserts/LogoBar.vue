@@ -16,9 +16,6 @@ const props = defineProps({
         required: true
     }
 });
-
-// const logoList = computed(() => props.logoList);
-
 </script>
 
 

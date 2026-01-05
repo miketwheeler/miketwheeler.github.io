@@ -1,6 +1,6 @@
 <template>
     <v-container id="projects">
-        <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Projects</div>
+        <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Projects & Experience</div>
         <v-card minHeight="900" variant="text" rounded="xl">
             <v-row>
                 <v-col cols="12">
@@ -19,8 +19,11 @@ import data from '@/data/data';
 interface Project {
     id: string | null;
     featured: boolean | null;
+    private: boolean | null;
     gifId: string | null;
+    youtubeLink: string | null;
     imageTitle: string | null;
+    subtitle: string | null;
     cardTitle: string | null;
     cardDescription: string | null;
     projectLink: string | null;

@@ -10,19 +10,13 @@
 
 <script lang="ts" setup>
 const profileBubbleSize = 50;
-
-
 </script>
 
 <style lang="scss" scoped>
 .profile-bubble {
     position: fixed;
-    // top: -10px;
     right: 6px;
     z-index: 1000 !important;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
 }
 
 .bubble-bg {
@@ -37,7 +31,7 @@ const profileBubbleSize = 50;
 
 .hero-image {
     position: absolute;
-    /* bottom: -68px; */
+    bottom: -68px;
     border-radius: 999px;
     overflow: hidden;
     z-index: 2;
