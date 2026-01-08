@@ -3,7 +3,7 @@
         rounded="xl" class="pa-4 mb-3" elevation="8">
         <v-card-title>
             <div v-if="edu.source && edu.dateComplete"
-                class="d-flex text-subtitle-1 w-100 justify-space-between text-primary">
+                class="d-flex text-subtitle-1 w-100 justify-space-between text-primary text-wrap">
                 <div>
                     {{ edu.source }}
                 </div>
@@ -30,7 +30,7 @@
         rounded="xl" class="pa-4 mb-3">
         <v-card-title>
             <div v-if="edu.source && edu.dateComplete"
-                class="d-flex text-subtitle-1 w-100 justify-space-between text-primary">
+                class="d-flex text-subtitle-1 w-100 justify-space-between text-primary text-wrap">
                 <div>
                     {{ edu.source }}
                 </div>

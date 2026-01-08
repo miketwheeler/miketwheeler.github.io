@@ -1,5 +1,5 @@
 <template>
-    <v-chip :key="logoList.length" color="transparent">
+    <v-chip :key="logoList.length" color="background" variant="flat">
         <div v-if="logoList.length > 0" class="d-flex flex-wrap align-center justify-center">
             <img v-for="logo in logoList" :key="logo.key" :src="logo.searchIcon" alt="Logo" class="my-4 mx-2" width="20"
                 height="20" v-tooltip="logo.altName" />

@@ -46,7 +46,7 @@ const { smAndUp } = useDisplay()
 .sticky-appbar {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100000;
 }
 
 .app-bar-title {
@@ -54,7 +54,7 @@ const { smAndUp } = useDisplay()
     flex-direction: row;
     flex-wrap: nowrap;
     width: fit-content;
-    gap: 0.75rem;
+    gap: 0.5rem;
     font-size: 1.8rem;
 }
 

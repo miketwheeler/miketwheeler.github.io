@@ -149,6 +149,7 @@ onBeforeUnmount(() => {
     position: relative;
     height: 320px;
     /* adjust to taste */
+    z-index: 1000;
     overflow: hidden;
     /* THIS hides the spill under tabs */
 }
