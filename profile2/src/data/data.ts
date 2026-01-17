@@ -311,7 +311,7 @@ export const projectCardList = [
         featured: true,
         private: true,
         gifId: null,
-        youtubeLink: null,
+        youtubeLink: "https://www.youtube.com/embed/CoLxMBqZ4mg?si=LQuDeVIX0J08kHif",
         imageTitle: "automagical-manual-image",
         subtitle: "Active project – Concept / MVP",
         cardTitle: "Aut🧐magical Manual",
