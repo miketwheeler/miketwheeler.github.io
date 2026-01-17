@@ -8,3 +8,22 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+html {
+    scroll-behavior: smooth;
+}
+
+.v-application__wrap {
+    scroll-padding-top: 112px;
+}
+
+
+[data-anchor] {
+    scroll-margin-top: 112px;
+}
+
+@media (max-width: 960px) {
+    [data-anchor] {
+        scroll-margin-top: 112px;
+    }
+}

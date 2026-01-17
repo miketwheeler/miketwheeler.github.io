@@ -325,11 +325,11 @@ export const projectCardList = [
         featured: true,
         private: true,
         gifId: null,
-        youtubeLink: null,
+        youtubeLink: "https://www.youtube-nocookie.com/embed/RKpMvDXzqw4?si=ZJqfEkemRSeclSYv&amp;controls=0",
         imageTitle: "polar-policy-assurance-reviewer-image",
         subtitle: "Concept / MVP",
         cardTitle: "POLAR",
-        cardDescription: "POLAR (Policy Assurance Reviewer) is a cloud-native proof of concept focused on intelligent document extraction and analysis. Built with Blazor Server, .NET 8, C#, and MudBlazor, it leverages Microsoft Azure Document Intelligence AI to process and extract structured data from a wide range of document types.\n\nThe system supports typed, scanned, handwritten (across multiple languages), and photographed documents, handling ambiguous and inconsistent formats with high accuracy. POLAR significantly reduces manual processing effort while improving efficiency and data reliability. The platform is intentionally open-ended, designed to serve as a foundation for varied document-driven workflows and future implementations.",
+        cardDescription: "POLAR (Policy Assurance Reviewer) is a cloud-native proof of concept focused on intelligent document extraction and analysis. Built with Blazor Server, .NET 8, C#, and MudBlazor, it leverages Microsoft Azure Document Intelligence AI to process and extract structured data from a wide range of document types and variable document formats - in this demo though, we focus on single trained model and associated document.\n\nThe system concept supports typed, scanned, handwritten (across multiple languages), and photographed documents, handling ambiguous and inconsistent formats with high accuracy. POLAR significantly reduces manual processing effort while improving efficiency and data reliability. The concept is intentionally open-ended, designed to showcase tooling and the potential of AI in document processing. This concept serves as a foundation for varied document-driven workflows and future implementations.",
         projectLink: null,
         siteLink: "https://polaraidocintel.azurewebsites.net/",
         logoList: [langsList.blazor, langsList.cs, langsList.mudBlazor, langsList.js, langsList.css, langsList.sql, toolsList.azure]

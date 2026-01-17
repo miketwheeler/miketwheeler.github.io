@@ -19,7 +19,8 @@
                     min-height="80">
                     <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" width="100%"
                         height="400" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;">
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" allowfullscreen>
                     </iframe>
                     <v-card-title v-else class="text-center">
                         Video Coming Soon...
@@ -107,30 +108,6 @@
 <script lang="ts" setup>
 import LogoBar from './LogoBar.vue';
 import { type Logo, type Project } from '@/data/data';
-
-// export interface Logo {
-//     key: number;
-//     title: string | null;
-//     link: string | null;
-//     linkedImgSource: string | null;
-//     altName: string | null;
-//     searchIcon: any;
-// }
-
-// interface Project {
-//     id: string | null;
-//     featured: boolean | null;
-//     private: boolean | null;
-//     gifId: string | null;
-//     youtubeLink: string | null;
-//     imageTitle: string | null;
-//     subtitle: string | null;
-//     cardTitle: string | null;
-//     cardDescription: string | null;
-//     projectLink: string | null;
-//     siteLink: string | null;
-//     logoList: Logo[] | null;
-// }
 
 const props = defineProps({
     project: {

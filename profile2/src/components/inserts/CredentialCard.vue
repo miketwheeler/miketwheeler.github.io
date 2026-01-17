@@ -11,7 +11,7 @@
                     {{ edu.dateComplete }}
                 </div>
             </div>
-            <div class="d-flex text-body-2 w-100 justify-space-between">
+            <div class="d-flex text-body-2 w-100 justify-space-between text-wrap">
                 <div>
                     {{ edu.what }}
                 </div>
@@ -38,7 +38,7 @@
                     {{ edu.dateComplete }}
                 </div>
             </div>
-            <div class="d-flex text-body-2 w-100 justify-space-between">
+            <div class="d-flex text-body-2 w-100 justify-space-between text-wrap">
                 <div>
                     {{ edu.what }}
                 </div>

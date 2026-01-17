@@ -60,13 +60,20 @@ const sections = {
     projects: ref<HTMLElement | null>(null),
     credentials: ref<HTMLElement | null>(null),
 }
-
 const APPBAR_HEIGHT = 64
 const TABS_HEIGHT = 48
 const ACTIVATION_LINE = APPBAR_HEIGHT + TABS_HEIGHT + 20 // Added a bit more padding
-
 let isScrollingLocked = false
-// let previousClickScrolled = -1;
+
+
+onMounted(() => {
+    window.addEventListener('scroll', updateActiveTab, { passive: true })
+    updateActiveTab()
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', updateActiveTab)
+})
 
 const scrollTo = (key: keyof typeof sections, index: number) => {
     const el = sections[key].value
@@ -80,6 +87,7 @@ const scrollTo = (key: keyof typeof sections, index: number) => {
     window.scrollTo({
         top: y,
         behavior: 'smooth',
+
     })
 
     const checkEnd = () => {
@@ -87,8 +95,6 @@ const scrollTo = (key: keyof typeof sections, index: number) => {
         window.removeEventListener('scrollend', checkEnd)
     }
     window.addEventListener('scrollend', checkEnd, { once: true })
-
-    // previousClickScrolled = index;
 
     // Fallback for Safari/older browsers that don't support scrollend
     setTimeout(() => { isScrollingLocked = false }, 1000)
@@ -121,14 +127,6 @@ const updateActiveTab = () => {
     }
 }
 
-onMounted(() => {
-    window.addEventListener('scroll', updateActiveTab, { passive: true })
-    updateActiveTab()
-})
-
-onBeforeUnmount(() => {
-    window.removeEventListener('scroll', updateActiveTab)
-})
 </script>
 
 
