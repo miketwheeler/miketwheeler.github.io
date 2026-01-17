@@ -304,7 +304,7 @@ export const projectCardList = [
         cardDescription: `Personaprint is a personality-driven matching platform built to make meaningful connections faster and more intentional in an increasingly digital world. Instead of allowing personality traits to surface slowly over time, Personaprint captures and abstracts deeper personality data up front, providing a stronger starting point for connection. \n\nThe frontend is built with Vuetify, TypeScript, HTML, and CSS, while the backend is powered by FastAPI(Python) with Pydantic models and MongoDB.At its core is a fully custom matching engine designed from scratch, leveraging richer, multidimensional personality data rather than shallow surface- level attributes.AI is used as a supportive layer to assist with early interactions, informed by personality traits to encourage more thoughtful and compatible connections.`,
         projectLink: "https://github.com/miketwheeler/hwstairandrail",
         siteLink: null,
-        logoList: [toolsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
+        logoList: [langsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
     },
     {
         id: 'automagicalmanual',
@@ -318,7 +318,7 @@ export const projectCardList = [
         cardDescription: "Automagical Manual is a no-code documentation platform designed to make creating and maintaining complex documentation accessible to anyone. Starting from a blank canvas, users can construct structured, visually polished documents directly from the UI without writing code. \n\nBuilt with Vuetify, TypeScript, HTML, and CSS on the frontend and FastAPI, Pydantic, and MongoDB on the backend, the system uses a purpose-built data schema that dynamically translates document sections into clean, consistent UI components. The platform also integrates a Retrieval-Augmented Generation (RAG) AI system that understands documents in real time — even while they are being built — and can assist with editing, expanding sections, generating new content, and answering questions about the documentation corpus.",
         projectLink: null,
         siteLink: null,
-        logoList: [toolsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
+        logoList: [langsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
     },
     {
         id: 'polarpolicyassurancereviewer',
