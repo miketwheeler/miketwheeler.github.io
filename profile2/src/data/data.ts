@@ -527,7 +527,7 @@ export const hobbyCardList = [
         imageTitle: "drones-image",
         cardTitle: "Drones",
         subtitle: "Hobby & Interest - drones",
-        cardDescription: `I enjoy flying drones and capturing high-quality aerial photography and videography. I have flown in various locations and captured stunning shots of landscapes, cityscapes, and events. I am also an avid RC plane enthusiast. I enjoy building, flying, and racing RC planes. I am a member of the Academy of Model Aeronautics (AMA) and actively participate in local RC flying events.`,
+        cardDescription: `Since 2015, immediately following the MultiWii days into BetaFlight's early days, I've been flying FPV drones. I used to have to source parts for my builds, out of chinese import shops, assemble the electrical system/layouts, solder components, flash the firmware to the flight controller and ESCs, bind the RC reciver for my RC remote controller and setup the TX/RX for the AV module to my remote goggle receiver. I enjoy flying drones and capturing high-quality aerial photography and videography. I have flown in various locations and captured stunning shots of landscapes, cityscapes, and events. I enjoy building, flying, tuning the flight controller PID loops and racing RC drones.`,
         projectLink: null,
         siteLink: null,
         logoList: []
