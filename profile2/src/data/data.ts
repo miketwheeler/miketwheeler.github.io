@@ -61,7 +61,7 @@ export interface DegreeCard {
 }
 
 
-// const data = {
+// Tools - the items I use to do what I do
 export const toolsList = {
     vuetify: {
         "key": 0,
@@ -145,6 +145,8 @@ export const toolsList = {
         "searchIcon": Azure,
     },
 } satisfies Record<string, Logo>;
+
+// Programming Languages & Frameworks
 export const langsList = {
     ts: {
         "key": 0,
@@ -291,6 +293,7 @@ export const langsList = {
 // next.js-React.js (H&W stair and rail) -> 5362vGll2WQMOXVJDk
 // nucamp Bootstrap App -> l6xLarRafOXpEOlOGk
 
+// Projects
 export const projectCardList = [
     {
         id: 'personaprint',
@@ -302,7 +305,7 @@ export const projectCardList = [
         cardTitle: "Personaprint",
         subtitle: "Active project – planned deployment",
         cardDescription: `Personaprint is a personality-driven matching platform built to make meaningful connections faster and more intentional in an increasingly digital world. Instead of allowing personality traits to surface slowly over time, Personaprint captures and abstracts deeper personality data up front, providing a stronger starting point for connection. \n\nThe frontend is built with Vuetify, TypeScript, HTML, and CSS, while the backend is powered by FastAPI(Python) with Pydantic models and MongoDB.At its core is a fully custom matching engine designed from scratch, leveraging richer, multidimensional personality data rather than shallow surface- level attributes.AI is used as a supportive layer to assist with early interactions, informed by personality traits to encourage more thoughtful and compatible connections.`,
-        projectLink: "https://github.com/miketwheeler/hwstairandrail",
+        projectLink: null,
         siteLink: null,
         logoList: [langsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
     },
@@ -449,11 +452,12 @@ export const projectCardList = [
     },
 ] as Project[];
 
+// Accredited Education
 export const degreeCardData = {
     accredited: [
         {
             source: "University of Nebraska at Omaha",
-            dateComplete: "Graduated - 12/2019",
+            dateComplete: "12/2019",
             what: "Bachelor's of Science in Management Information Systems",
             location: "Omaha, Nebraska",
             blurb: "Completed a comprehensive program focused on software development, systems analysis, databasing, and project management. Coursework emphasized both technical implementation and high-level system design, covering the full software development lifecycle.\n\nKey areas of study included advanced database systems, information systems assurance, project management, web development, and object-oriented programming (Java). The two-part project management sequence spanned an entire academic year and involved identifying a real-world client, conducting requirements gathering and consultation, and delivering a functional application.\n\nDesigned and built a volunteer management system for the American Foundation for Suicide Prevention (AFSP), Omaha Chapter, applying end-to-end SDLC practices from requirements analysis through implementation."
@@ -462,7 +466,7 @@ export const degreeCardData = {
             source: "University of Nebraska at Omaha",
             what: "Certificate in Systems Development",
             location: "Omaha, Nebraska",
-            dateComplete: "Achieved - 12/2019",
+            dateComplete: "12/2019",
             blurb: "Earned concurrently with the bachelor’s degree, with additional focus on enterprise and infrastructure-oriented topics. Coursework included Windows Server administration, advanced database management, and information architecture, strengthening practical understanding of system-level design, data organization, and operational environments."
         },
     ] as DegreeCard[],
@@ -490,7 +494,7 @@ export const degreeCardData = {
         },
         {
             source: "Nucamp Coding Bootcamp",
-            dateComplete: "Graduated - 04/2022",
+            dateComplete: "04/2022",
             what: "Certificate in Full Stack Web Development",
             location: "Redmond, Washington",
             blurb: "Completed a full-stack bootcamp covering modern web development tools and workflows. Built dynamic applications using React, React Native, MongoDB, Redux, Bootstrap, and CSS, with backend services assembled using Node.js and Express, culminating in a cloud deployment."
@@ -512,5 +516,20 @@ export const degreeCardData = {
     ] as DegreeCard[],
 };
 
-
-// export default data;
+// Hobbies & Interests
+export const hobbyCardList = [
+    {
+        id: 'drones',
+        featured: true,
+        private: true,
+        gifId: null, // TODO: yyoutube private listing ID(?)
+        youtubeLink: null,
+        imageTitle: "drones-image",
+        cardTitle: "Drones",
+        subtitle: "Hobby & Interest - drones",
+        cardDescription: `I enjoy flying drones and capturing high-quality aerial photography and videography. I have flown in various locations and captured stunning shots of landscapes, cityscapes, and events. I am also an avid RC plane enthusiast. I enjoy building, flying, and racing RC planes. I am a member of the Academy of Model Aeronautics (AMA) and actively participate in local RC flying events.`,
+        projectLink: null,
+        siteLink: null,
+        logoList: []
+    },
+] as Project[];

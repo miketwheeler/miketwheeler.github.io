@@ -1,5 +1,5 @@
 <template>
-    <v-container id="tools" minWidth="100%">
+    <v-container id="tools" class="pa-0 pa-sm-4">
         <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Tools</div>
         <v-card :color="cardBackground" elevation="0">
             <v-card-text class="d-flex flex-column">
@@ -8,7 +8,7 @@
                         <v-card elevation="0" variant="text">
                             <v-card-title class="align-center w-100 text-center">Top Languages &
                                 Libraries</v-card-title>
-                            <v-card-text color="surface-variant-alt" min-height="12px" class="pa-4">
+                            <v-card-text color="surface-variant-alt" min-height="12px" class="pa-0 pa-sm-4">
                                 <div class="d-flex flex-wrap align-center justify-center">
                                     <a v-for="lang in langsList" :key="lang.key" :href="lang.link" target="_blank"
                                         rel="noreferrer">
@@ -25,9 +25,9 @@
 
                 <v-row>
                     <v-col cols="12">
-                        <v-card elevation="0" variant="text">
+                        <v-card elevation="0" variant="text" class="pa-0">
                             <v-card-title class="align-center w-100 text-center">Tools</v-card-title>
-                            <v-card-text color="surface-variant-alt" min-height="12px" class="pa-4">
+                            <v-card-text color="surface-variant-alt" min-height="12px" class="pa-0 pa-sm-4">
                                 <div class="d-flex flex-wrap align-center justify-center">
                                     <!-- for each language and library, icon and link -->
                                     <a v-for="tool in toolsList" :key="tool.key" :href="tool.link" target="_blank"

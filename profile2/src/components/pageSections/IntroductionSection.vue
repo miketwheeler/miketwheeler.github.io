@@ -1,7 +1,7 @@
 <template>
-    <v-container id="intro" minWidth="100%" class="px-0">
+    <v-container id="intro" class="pa-0 pa-sm-4">
         <div class="mb-6 mt-8 mx-4 px-4" style="font-size: 2.8rem; opacity: 0.6;">Introduction</div>
-        <v-card minHeight="900" elevation="4" class="pa-8" :color="cardBackground">
+        <v-card elevation="4" class="pa-8" :color="cardBackground">
             <v-row>
                 <v-col cols="12" md="7" height="400">
                     <v-card elevation="0" :color="cardBackground">

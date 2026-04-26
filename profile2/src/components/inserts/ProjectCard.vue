@@ -4,33 +4,33 @@
         <!-- FEATURED CARD -->
         <v-card-text v-if="project.featured">
             <div v-if="project.cardTitle && project.logoList"
-                class="d-flex text-subtitle-1 w-100 justify-space-between mb-2 flex-wrap">
+                class="d-flex text-subtitle-1 w-100 justify-space-between mb-2 flex-wrap ga-2">
                 <div class="text-h4">
                     {{ project.cardTitle }}
                 </div>
-                <div class="align-center d-flex">
+                <div v-if="showToolset" class="align-center d-flex">
                     <LogoBar v-if="project.logoList" :logoList="project.logoList" />
                 </div>
             </div>
             <div class="d-flex flex-column w-100 card-description text-grey">
                 <v-img v-if="project.gifId && project.featured"
                     :src="`https://media.giphy.com/media/${project.gifId}/giphy.gif`" width="100%" />
-                <v-card rounded="xl" class="mb-6 mt-2 justify-center align-center d-flex" color="background"
-                    min-height="80">
-                    <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" width="100%"
-                        height="400" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+                <v-card rounded="xl" class="mb-6 mt-2 justify-center align-center d-flex w-100 overflow-hidden mx-auto" color="background"
+                    min-height="80" maxWidth="740px">
+                    <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" class="w-100"
+                        style="aspect-ratio: 16 / 9;" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
                         referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" allowfullscreen>
                     </iframe>
-                    <v-card-title v-else class="text-center">
+                    <v-card-title v-else class="text-center pa-16 text-grey">
                         Video Coming Soon...
                     </v-card-title>
                 </v-card>
                 {{ project.cardDescription }}
             </div>
-            <v-row class="mt-4">
-                <v-col cols="12">
-                    <v-btn v-if="project.siteLink" class="mr-2" :href="project.siteLink" target="_blank" color="primary"
+            <v-row v-if="showCode" class="mt-4">
+                <v-col cols="12" class="d-flex ga-2">
+                    <v-btn v-if="project.siteLink" :href="project.siteLink" target="_blank" color="primary"
                         rounded="xl" style="text-transform: none;" prependIcon="mdi-open-in-new"
                         v-tooltip="'Open Website in new tab'">
                         App Demo
@@ -65,8 +65,8 @@
                             </div>
                         </v-col>
                         <v-col cols="12" class="d-flex justify-end mt-auto">
-                            <div class="d-flex w-100">
-                                <v-btn v-if="project.siteLink" class="mr-2" :href="project.siteLink" target="_blank"
+                            <div class="d-flex w-100 ga-2">
+                                <v-btn v-if="project.siteLink" :href="project.siteLink" target="_blank"
                                     rounded="xl" color="primary" style="text-transform: none;"
                                     prepend-icon="mdi-open-in-new" v-tooltip="'Open Website in new tab'">
                                     App Demo
@@ -91,10 +91,10 @@
                     <v-img v-if="project.gifId && !project.featured" rounded="xl"
                         :src="`https://media.giphy.com/media/${project.gifId}/giphy.gif`" />
 
-                    <v-card rounded="xl" class="mb-6">
-                        <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" width="100%"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;">
+                    <v-card rounded="xl" class="mb-6 overflow-hidden">
+                        <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" class="w-100"
+                            style="aspect-ratio: 16 / 9;" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
                         </iframe>
                     </v-card>
                 </v-col>
@@ -113,6 +113,14 @@ const props = defineProps({
     project: {
         type: Object as () => Project,
         required: true
+    },
+    showCode: {
+        type: Boolean,
+        default: true,
+    },
+    showToolset: {
+        type: Boolean,
+        default: true,
     }
 })
 </script>

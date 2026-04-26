@@ -1,4 +1,6 @@
 <template>
+
+    <!-- accredited cards -->
     <v-card v-if="educationCategory === 'accredited'" v-for="(edu, index) in education" :key="`education-card-${index}`"
         rounded="xl" class="pa-4 mb-3" elevation="8">
         <v-card-title>
@@ -7,7 +9,7 @@
                 <div>
                     {{ edu.source }}
                 </div>
-                <div>
+                <div class="text-right">
                     {{ edu.dateComplete }}
                 </div>
             </div>
@@ -15,7 +17,7 @@
                 <div>
                     {{ edu.what }}
                 </div>
-                <div>
+                <div class="text-right">
                     {{ edu.location }}
                 </div>
             </div>
@@ -25,16 +27,16 @@
         </v-card-text>
     </v-card>
 
-
-    <v-card v-else v-for="(edu, index) in education" :key="`extracurricular-card-${index}`" :color="cardBackground"
-        rounded="xl" class="pa-4 mb-3">
+    <!-- extracurricular cards -->
+    <v-card v-else v-for="(edu, index) in education" :key="`extracurricular-card-${index}`"  color="transparent"
+        rounded="xl" class="pa-4 mb-3" border>
         <v-card-title>
             <div v-if="edu.source && edu.dateComplete"
                 class="d-flex text-subtitle-1 w-100 justify-space-between text-primary text-wrap">
                 <div>
                     {{ edu.source }}
                 </div>
-                <div>
+                <div class="text-right">
                     {{ edu.dateComplete }}
                 </div>
             </div>
@@ -42,7 +44,7 @@
                 <div>
                     {{ edu.what }}
                 </div>
-                <div>
+                <div class="text-right">
                     {{ edu.location }}
                 </div>
             </div>
@@ -57,14 +59,6 @@
 import { computed } from 'vue';
 import { degreeCardData, type DegreeCard } from '@/data/data';
 import { cardBackground } from '@/globals/globals';
-
-// interface Education {
-//     source: string | null;
-//     dateComplete: string | null;
-//     what: string | null;
-//     location: string | null;
-//     blurb: string | null;
-// }
 
 const props = defineProps({
     educationCategory: {

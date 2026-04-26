@@ -16,6 +16,7 @@ declare module 'vue' {
     CredentialsSection: typeof import('./components/pageSections/CredentialsSection.vue')['default']
     HeroLeft: typeof import('./components/inserts/hero/HeroLeft.vue')['default']
     HeroRight: typeof import('./components/inserts/hero/HeroRight.vue')['default']
+    HobbiesSection: typeof import('./components/pageSections/HobbiesSection.vue')['default']
     IntroductionSection: typeof import('./components/pageSections/IntroductionSection.vue')['default']
     LogoBar: typeof import('./components/inserts/LogoBar.vue')['default']
     ProjectCard: typeof import('./components/inserts/ProjectCard.vue')['default']

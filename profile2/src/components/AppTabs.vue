@@ -1,11 +1,15 @@
 <template>
     <v-container fluid class="ma-0 pa-0">
         <v-container fluid>
-            <v-row dense class="hero-row">
-                <v-col cols="12" sm="6" :class="smAndUp ? 'd-flex justify-end' : 'd-flex'">
+            <v-row dense class="hero-row d-flex justify-center w-100">
+                <v-col 
+                    cols="12" 
+                    sm="7" 
+                    :class="smAndUp ? 'd-flex justify-end' : 'd-flex'" 
+                    >
                     <HeroLeft />
                 </v-col>
-                <v-col cols="6" sm="6" class="d-none d-sm-flex">
+                <v-col cols="6" sm="5" class="d-none d-sm-flex">
                     <v-slide-y-reverse-transition mode="in-out">
                         <HeroRight v-if="smAndUp" />
                     </v-slide-y-reverse-transition>
@@ -17,12 +21,13 @@
             slider-transition="fade">
             <v-tab @click="scrollTo('intro', 0)" style="text-transform: none;">Introduction</v-tab>
             <v-tab @click="scrollTo('tools', 1)" style="text-transform: none;">Tools</v-tab>
-            <v-tab @click="scrollTo('projects', 2)" style="text-transform: none;">Projects & Experience</v-tab>
+            <v-tab @click="scrollTo('projects', 2)" style="text-transform: none;">Experience</v-tab>
             <v-tab @click="scrollTo('credentials', 3)" style="text-transform: none;">Credentials</v-tab>
+            <v-tab @click="scrollTo('hobbies', 4)" style="text-transform: none;">Hobbies & Interests</v-tab>
         </v-tabs>
 
         <!-- Scrollable Body -->
-        <v-sheet color="background" class="px-0" style="border: 1px solid var(--v-theme-on-surface)">
+        <v-sheet color="background" class="px-0 pb-12" style="border: 1px solid var(--v-theme-on-surface)">
             <div :ref="sections.intro" class="section pt-8">
                 <IntroductionSection />
             </div>
@@ -35,7 +40,9 @@
             <div :ref="sections.credentials" class="section">
                 <CredentialsSection />
             </div>
-
+            <div :ref="sections.hobbies" class="section">
+                <HobbiesSection />
+            </div>
         </v-sheet>
 
     </v-container>
@@ -49,7 +56,7 @@ import IntroductionSection from '@/components/pageSections/IntroductionSection.v
 import ProjectsSection from '@/components/pageSections/ProjectsSection.vue';
 import CredentialsSection from '@/components/pageSections/CredentialsSection.vue';
 import ToolsSection from '@/components/pageSections/ToolsSection.vue';
-
+import HobbiesSection from '@/components/pageSections/HobbiesSection.vue';
 
 const { smAndUp } = useDisplay()
 
@@ -59,6 +66,7 @@ const sections = {
     tools: ref<HTMLElement | null>(null),
     projects: ref<HTMLElement | null>(null),
     credentials: ref<HTMLElement | null>(null),
+    hobbies: ref<HTMLElement | null>(null),
 }
 const APPBAR_HEIGHT = 64
 const TABS_HEIGHT = 48
@@ -145,8 +153,7 @@ const updateActiveTab = () => {
 
 .hero-row {
     position: relative;
-    height: 320px;
-    /* adjust to taste */
+    height: 320px;;
     z-index: 1000;
     overflow: hidden;
     /* THIS hides the spill under tabs */

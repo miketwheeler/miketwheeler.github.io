@@ -1,12 +1,12 @@
 <template>
-    <v-container id="projects" class="pa-0 pa-sm-4">
-        <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Experience</div>
-        <v-card minHeight="900" variant="text" rounded="xl">
+    <v-container id="hobbies" class="pa-0 pa-sm-4">
+        <div class="mb-6 mt-8 mx-4" style="font-size: 2.8rem; opacity: 0.6;">Hobbies & Interests</div>
+        <v-card  variant="text"rounded="xl">
             <v-row>
                 <v-col cols="12">
-                    <section v-for="project in projects" :key="`project-${project.id}`"
-                        :id="`project-card-${project.id}`" data-anchor>
-                        <ProjectCard :project="project" />
+                    <section v-for="hobby in hobbies" :key="`hobby-${hobby.id}`"
+                        :id="`hobby-card-${hobby.id}`" data-anchor>
+                        <ProjectCard :project="hobby" :showCode="false" :showToolset="false" />
                     </section>
                 </v-col>
             </v-row>
@@ -19,11 +19,11 @@
 import { computed, onMounted, nextTick, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import ProjectCard from '@/components/inserts/ProjectCard.vue';
-import { projectCardList, type Project } from '@/data/data';
+import { hobbyCardList } from '@/data/data';
 
 
 const route = useRoute()
-const projects = computed(() => projectCardList)
+const hobbies = computed(() => hobbyCardList)
 
 
 const scrollToHash = async () => {
