@@ -310,6 +310,20 @@ export const projectCardList = [
         logoList: [langsList.vuetify, langsList.ts, langsList.css, langsList.py, langsList.fastAPI, langsList.mongoDB]
     },
     {
+        id: 'wa-vendor-payments-dashboard',
+        featured: true,
+        private: false,
+        gifId: null, // TODO: yyoutube private listing ID(?)
+        youtubeLink: "https://www.youtube.com/embed/khQtAPaDwnk?si=b3kYctpFr2HnTycs",
+        imageTitle: "wa-vendor-payments-dashboard-image",
+        cardTitle: "WA Vendor Payments Dashboard",
+        subtitle: "Built as a submission candidate for a Software Developer position",
+        cardDescription: `an assignment was issued where we were to build out any kind of 'product' that would utilize a spreadsheet of real-world data, answer questions, include a comprehensive .readme, and provide a narrated video walkthrough that included answers to additional questions/points requested by the company that posted the role.\n\nI studied the spreadsheet and thought of ways I could utilize it in a product. I decided to develop an interactive and dynamic dashboard to allow any user to explore the data - both in aggregate and via filtering capability.\n\nThe entire app was built in under an hour total having the ability to work in conjunction with AI models - about 30 mins to create and hash out an implementation plan, then structuring and installing packages used into an initial project. And then about 15-20 mins spent troubleshooting and refactoring, mostly to work out errors/issues.\n\nBuilt with Vuetify/Vue + Typescript, ApexCharts, and Papaparse (for working with CSV/Spreadsheet data)`,
+        projectLink: "https://github.com/miketwheeler/vendor-payments-ui/tree/master/vendor-payments-ui",
+        siteLink: null,
+        logoList: [langsList.vuetify, langsList.ts, langsList.css]
+    },
+    {
         id: 'automagicalmanual',
         featured: true,
         private: true,
@@ -342,11 +356,11 @@ export const projectCardList = [
         featured: true,
         private: true,
         gifId: null,
-        youtubeLink: null,
+        youtubeLink: "https://www.youtube.com/embed/yy4WXQC3jTo?si=Nn1BlE7CFi4sqPEy",
         imageTitle: "community-action-program-image",
         subtitle: "Client / nonprofit project (in production)",
         cardTitle: "Community Action Program",
-        cardDescription: "A full-stack, server-side web application built primarily in Blazor Server using C#, .NET, and MudBlazor components. The platform is backed by Microsoft SQL Server and hosted on Microsoft Azure, with development and deployment managed through GitHub, Azure DevOps, and regular stakeholder standups.\n\nThe application serves as a business and operations management system for a nonprofit organization and is actively used in production with sensitive data. It includes a custom checkout and point-based purchasing system that functions as an in-store register, allowing enrolled individuals to spend assigned monthly points in place of traditional currency.\n\nAn administrative interface supports volunteer management, product and category management (including cost configuration for downstream reporting), and a reporting system built around predefined use cases and configurable selection inputs. While the reporting UI was constrained by third-party licensing, I contributed significantly to the underlying data modeling and query logic.",
+        cardDescription: "A full-stack, server-side web application built in Blazor Server using C#/.NET and MudBlazor components. The backend is a Microsoft SQL Server database and the application is hosted on Microsoft Azure. Development and deployment were managed through GitHub, Azure DevOps, and regular stakeholder standups.\n\nThe application serves as a business and operations management system for a nonprofit organization and is actively used in production with sensitive data. It includes a custom checkout and point-based purchasing system that functions as an in-store register, allowing enrolled individuals to spend assigned monthly points in place of traditional currency.\n\nAn administrative interface supports volunteer management, product and category management (including cost configuration for downstream reporting), and a reporting system built around predefined use cases and configurable selection inputs. While the reporting UI was constrained by third-party licensing, I contributed significantly to the underlying data modeling and query logic.",
         projectLink: null,
         siteLink: null,
         logoList: [langsList.blazor, langsList.cs, langsList.mudBlazor, langsList.js, langsList.css, langsList.sql, toolsList.azure]
@@ -364,6 +378,20 @@ export const projectCardList = [
         projectLink: null,
         siteLink: null,
         logoList: [langsList.blazor, langsList.cs, langsList.mudBlazor, langsList.js, langsList.css, langsList.sql, toolsList.azure]
+    },
+    {
+        id: 'pupperamma',
+        featured: true,
+        private: false,
+        gifId: null,
+        youtubeLink: "https://www.youtube.com/embed/O4QBqHGYy0k?si=wmBfiJJgisGxHYl2",
+        imageTitle: "pupper-amma-image",
+        subtitle: "As a part of a job application submission",
+        cardTitle: "Pupperamma",
+        cardDescription: "This is a solely frontend app built in Vuetify with javascript.  After applying to frontend engineer role, I was prompted to construct an interface - with a few defined requirements and some optional. There was a provided API doc that was to be utilized - with some missing details as a problem solving exercise.",
+        projectLink: "https://github.com/miketwheeler/pupperamma",
+        siteLink: null,
+        logoList: [langsList.vuetify, langsList.js, langsList.css]
     },
     {
         id: 'hwstairandrail',
@@ -523,11 +551,11 @@ export const hobbyCardList = [
         featured: true,
         private: true,
         gifId: null, // TODO: yyoutube private listing ID(?)
-        youtubeLink: null,
+        youtubeLink: "https://www.youtube.com/embed/z4KLTH4OssE?si=hs8LLgscGdVTth8g",
         imageTitle: "drones-image",
         cardTitle: "Drones",
         subtitle: "Hobby & Interest - drones",
-        cardDescription: `Since 2015, immediately following the MultiWii days into BetaFlight's early days, I've been flying FPV drones. I used to have to source parts for my builds, out of chinese import shops, assemble the electrical system/layouts, solder components, flash the firmware to the flight controller and ESCs, bind the RC reciver for my RC remote controller and setup the TX/RX for the AV module to my remote goggle receiver. I enjoy flying drones and capturing high-quality aerial photography and videography. I have flown in various locations and captured stunning shots of landscapes, cityscapes, and events. I enjoy building, flying, tuning the flight controller PID loops and racing RC drones.`,
+        cardDescription: `Since 2015, immediately following the MultiWii days into BetaFlight's early days, I've been flying FPV drones. I used to have to source parts for my builds out of chinese import shops, assemble the electrical system/layouts, solder components, flash the firmware to the flight controller and ESCs, bind the RC reciver for my RC remote controller and setup the TX/RX for the AV module to my remote goggle receiver.\n\nI enjoy flying drones and capturing high-quality aerial photography and videography. I have flown in various locations and captured stunning shots of landscapes, cityscapes, and events. I enjoy building, flying, tuning the flight controller PID loops and racing RC drones.`,
         projectLink: null,
         siteLink: null,
         logoList: []

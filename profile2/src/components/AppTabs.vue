@@ -102,7 +102,7 @@ const scrollTo = (key: keyof typeof sections, index: number) => {
         isScrollingLocked = false
         window.removeEventListener('scrollend', checkEnd)
     }
-    window.addEventListener('scrollend', checkEnd, { once: true })
+    window.addEventListener('scrollend', checkEnd, { once: true, passive: true })
 
     // Fallback for Safari/older browsers that don't support scrollend
     setTimeout(() => { isScrollingLocked = false }, 1000)

@@ -19,8 +19,8 @@
                     min-height="80" maxWidth="740px">
                     <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" class="w-100"
                         style="aspect-ratio: 16 / 9;" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
-                        referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" allowfullscreen>
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen; compute-pressure;"
+                        referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player">
                     </iframe>
                     <v-card-title v-else class="text-center pa-16 text-grey">
                         Video Coming Soon...
@@ -94,7 +94,8 @@
                     <v-card rounded="xl" class="mb-6 overflow-hidden">
                         <iframe v-if="project.youtubeLink" :src="project.youtubeLink" loading="lazy" class="w-100"
                             style="aspect-ratio: 16 / 9;" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; compute-pressure; fullscreen; web-share"
+                            title="Youtube player">
                         </iframe>
                     </v-card>
                 </v-col>

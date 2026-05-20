@@ -25,7 +25,7 @@
                         <v-col cols="12" sm="6" md="12">
                             <v-card class="py-6 px-8" height="100%" rounded="xl">
                                 <v-card-title class="text-primary">Primary Skillset</v-card-title>
-                                <v-card-text class="px-6">
+                                <v-card-text class="px-2 px-md-6">
                                     <ul>
                                         <li v-for="(item, index) in primarySkillsList" :key="index">{{ item }}</li>
                                     </ul>
@@ -35,7 +35,7 @@
                         <v-col cols="12" sm="6" md="12">
                             <v-card class="py-6 px-8" height="100%" rounded="xl">
                                 <v-card-title class="text-primary">Secondary Skillset</v-card-title>
-                                <v-card-text class="px-6">
+                                <v-card-text class="px-2 px-md-6">
                                     <ul>
                                         <li v-for="(item, index) in secondarySkillsList" :key="index">{{ item }}</li>
                                     </ul>
