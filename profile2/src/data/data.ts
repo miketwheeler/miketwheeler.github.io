@@ -300,7 +300,7 @@ export const projectCardList = [
         featured: true,
         private: true,
         gifId: null, // TODO: yyoutube private listing ID(?)
-        youtubeLink: "https://www.youtube.com/embed/2vef9JC-NFI?si=mR76JKQATvUzUObL",
+        youtubeLink: "https://www.youtube.com/embed/9J45cZMxKdo?si=T3ojfIN4kZ3zPXcq",
         imageTitle: "personaprint-image",
         cardTitle: "Personaprint",
         subtitle: "Active project – planned deployment",
